@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/base.css" rel="stylesheet">
+		<link href="../css/newrec.css" rel="stylesheet">
+
+		<link rel="icon" href="../images/icon.png">
+		<title>Tell Us About Yourself</title>
+	</head>
+	<body>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/newrec.js"></script>
+
+		<div class="container-fluid">
+
+			<div class="row header">
+				<div class="banner col-10">
+					<span id="cgc">The College Guidance Center</span>
+				</div>
+				<div class="user col align-items-end">
+					<span><img id="profile" src="../images/logo.png" alt="../images/logo.png"><span id="name">NameOfUser</span></span>
+				</div>
+			</div>
+
+
+			<div class="row body">
+
+				<div class="sidebar col-2">
+					<p><a href="#">HOME</a></p>
+					<p><a href="#">MY PROFILE</a></p>
+					<p><a href="#">MY CONCERNS</a></span>
+					<p><a href="#">ABOUT US</a></p>
+					<p><a href="#">CONTACT US</a></p>
+				</div>
+
+
+				<div class="content col">
+					<div class="spf col-8 offset-3">
+
+						<form name="stdnt-info" class="" action="" method="">
+							<fieldset>
+
+								<div class="row category">
+									<div class="category-prsnl col-12">
+										<span>PERSONAL BACKGROUND</span>
+									</div>
+								</div>
+
+
+								<div class="row align-items-center">
+
+									<div class="nos col-2">
+										<span>NAME <br> OF <br> STUDENT</span>
+									</div>
+
+
+									<div class="col-8">
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon col-2" id="basic-addon1">FIRSTNAME *</span>
+												<input type="text" name="frstnm" id="frstnm" class="form-control" placeholder="Firstname" aria-describedby="basic-addon1">
+											</div>
+											<div class="input-group">
+												<span class="input-group-addon col-2" id="basic-addon1">MIDDLE NAME</span>
+												<input type="text" name="middlnm" id="middlnm" class="form-control" placeholder="Middle Name" aria-describedby="basic-addon1">
+											</div>
+											<div class="input-group">
+												<span class="input-group-addon col-2" id="basic-addon1">LASTNAME *</span>
+												<input type="text" name="lastnm" id="lastnm" class="form-control" placeholder="Lastname" aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-2" id="uplded-img">
+										<input type='file' onchange="readURL(this);"  />
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="col-6">
+										<div class="input-group">
+											<span class="input-group-addon col-3" id="basic-addon1">COURSE *</span>
+											<input type="text" name="crs" id="crs" class="form-control" placeholder="Course" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+
+									<div class="col-6">
+										<div class="input-group">
+											<span class="input-group-addon col-3" id="basic-addon1">MAJOR</span>
+											<input type="text" name="mjr" id="mjr" class="form-control" placeholder="Major" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+
+									<div class="col-6">
+										<div class="input-group">
+											<span class="input-group-addon col-3" id="basic-addon1">ID NUMBER *</span>
+											<input type="text" name="idnum" id="idnum" class="form-control" placeholder="ID Number" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+
+									<div class="col-6">
+										<div class="input-group">
+											<span class="input-group-addon col-3" id="basic-addon1">YEAR LEVEL *</span>
+											<input type="number" name="yrlvl" id="yrlvl" min="1" max="4" class="form-control" placeholder="Year Level" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="col-12">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">CURRENT ADDRESS</span>
+											<input type="text" name="curr-addr" id="curr-addr" class="form-control" placeholder="Current Address" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+
+									<div class="col-12">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">PERMANENT ADDRESS</span>
+											<input type="text" name="perm-addr" id="perm-addr" class="form-control" placeholder="Permanent Address" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="col-6">
+										<div class="input-group">
+											<span class="input-group-addon col-4" id="basic-addon1">CONTACT NUMBER</span>
+											<input type="text" name="cntct-num" id="cntct-num" class="form-control" placeholder="Contact Number" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+
+									<div class="col-6">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">E-MAIL</span>
+											<input type="email" name="e-mail" id="e-mail" class="form-control" placeholder="E-Mail" aria-describedby="basic-addon1">
+										</div>
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="col-6">
+
+										<div class="input-group">
+											<span class="input-group-addon col-3" id="basic-addon1">DATE OF BIRTH *</span>
+											<input type="date" name="birth-date" id="birth-date" class="form-control" aria-describedby="basic-addon1">
+										</div>
+
+
+										<div class="input-group">
+											<span class="input-group-addon col-3" id="basic-addon1">PLACE OF BIRTH</span>
+											<input type="text" name="birthhplace" id="birthhplace" class="form-control" placeholder="Place of Birth" aria-describedby="basic-addon1">
+										</div>
+
+									</div>
+
+
+									<div class="col-6">
+
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">AGE *</span>
+											<input type="number" name="age" class="form-control" placeholder="Age" aria-describedby="basic-addon1">
+										</div>
+
+
+										<fieldset class="sex">
+											<div class="input-group">
+												<span id="sex">SEX *</span>
+												<label class="custom-control custom-radio">
+													<input type="radio" name="sex" id="sex" class="custom-control-input" value="Male">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Male</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input type="radio" name="sex" id="sex" class="custom-control-input" value="Female">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Female</span>
+												</label>
+											</div>
+										</fieldset>
+
+
+										<div class="input-group">
+											<span class="input-group-addon" id="basic-addon1">NATIONALITY</span>
+											<input type="text" name="nat" id="nat" class="form-control" placeholder="Nationality" aria-describedby="basic-addon1">
+										</div>
+
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="col-6">
+										<span id="civ">CIVIL STATUS</span>
+									</div>
+
+
+									<div class="col-6">
+										<span id="adm">ADMISSION CLASSIFICATION</span>
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="col-6">
+										<fieldset>
+
+											<div class="form-group">
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="civ" id="sngl" class="custom-control-input" value="Single">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Single</span>
+												</label>
+												<label class="custom-control custom-radio col-2">
+													<input type="radio" name="civ" id="mrrd" class="custom-control-input" value="Married">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Married</span>
+												</label>
+												<label class="custom-control custom-radio col-2">
+													<input type="radio" name="civ" id="wdw" class="custom-control-input" value="Widowed">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Widowed</span>
+												</label>
+
+												<div class="w-100"></div>
+
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="civ" id="sep-div" class="custom-control-input" value="Separated/Divorced">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Separated/Divorced</span>
+												</label>
+												<label class="custom-control custom-radio col-2">
+													<input type="radio" name="civ" id="livn" class="custom-control-input" value="Live-in">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Live-in</span>
+												</label>
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="civ" id="sngl-prnt" class="custom-control-input" value="Single Parent">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Single Parent</span>
+												</label>
+
+												<div class="w-100"></div>
+
+												<label class="custom-control custom-radio col-12">
+													<input type="radio" name="civ" id="civ-other" class="custom-control-input">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Other</span>
+
+													<div id="specific-civ">
+														<div class="form-group">
+															<input type="text" id="other-civ" placeholder="Please Specify">
+														</div>
+													</div>
+												</label>
+											</div>
+										</fieldset>
+									</div>
+
+
+									<div class="col-6">
+										<fieldset>
+											<div class="form-group">
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="admssn" id="new-enrll" class="custom-control-input" value="New Enrollee">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">New Enrollee</span>
+												</label>
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="admssn" id="crss-enrll" class="custom-control-input" value="Cross Enrollee">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Cross Enrollee</span>
+												</label>
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="admssn" id="re-admt" class="custom-control-input" value="Re-Admitted">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Re-Admitted</span>
+												</label>
+
+												<div class="w-100"></div>
+
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="admssn" id="dgr-holdr" class="custom-control-input" value="Degree Holder">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Degree Holder</span>
+												</label>
+												<label class="custom-control custom-radio col-3">
+													<input type="radio" name="admssn" id="trnsfr" class="custom-control-input" value="Transferee">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Transferee</span>
+												</label>
+												<label class="custom-control custom-radio col-4">
+													<input type="radio" name="admssn" id="shrt-crs" class="custom-control-input" value="Short-term Course">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Short-term Course</span>
+												</label>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+
+
+								<div class="row">
+									<div class="col-6">
+										<span id="emp">Employment Status</span>
+									</div>
+
+
+									<div class="col">
+										<span id="loc">Location During Schooldays</span>
+									</div>
+								</div>
+
+
+								<div class="row">
+
+									<div class="col-6">
+										<div class="form-group">
+											<fieldset>
+												<label class="custom-control custom-radio">
+													<input type="radio" name="emplymnt" id="emplyd" onclick="empCheck();" class="custom-control-input" value="employed">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Employed</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input type="radio" name="emplymnt" id="unemplyd" class="custom-control-input" value="unemployed">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Unemployed</span>
+												</label>
+											</fieldset>
+
+											<div id="emplyr-info" class="empinfo col-12">
+												<fieldset>
+													<div class="input-group">
+														<span class="input-group-addon col-4" id="basic-addon1">Employer's Name</span>
+														<input type="text" name="emplyr-nm" id="emplyr-nm" class="form-control" placeholder="Employer's Name" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<span class="input-group-addon col-4" id="basic-addon1">Employer's Address</span>
+														<input type="text" name="emplyr-addr" id="emplyr-addr" class="form-control" placeholder="Employer's Address" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<span class="input-group-addon col-4" id="basic-addon1">Employer's Contact #</span>
+														<input type="text" name="emplyr-num" id="emplyr-num" class="form-control" placeholder="Employer's Contact #" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<span class="input-group-addon col-4" id="basic-addon1">Year's With Employer</span>
+														<input type="number" name="emplyr-tm" id="emplyr-tm" class="form-control" placeholder="Year's With Employer" aria-describedby="basic-addon1">
+													</div>
+												</fieldset>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col-6">
+										<fieldset>
+											<div class="col-12">
+												<div class="form-group">
+													<label class="custom-control custom-checkbox col-12">
+														<input type="checkbox" name="schlday-loc" id="relatives" class="custom-control-input" value="relatives">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">In A Relative's House</span>
+													</label>
+													<label class="custom-control custom-checkbox col-12">
+														<input type="checkbox" name="schlday-loc" id="whole" class="custom-control-input" value="whole">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">At Home With The Whole Family</span>
+													</label>
+													<label class="custom-control custom-checkbox col-12">
+														<input type="checkbox" name="schlday-loc" id="some" class="custom-control-input" value="some">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">At Home With Some Of The Family</span>
+													</label>
+													<label class="custom-control custom-checkbox col-12">
+														<input type="checkbox" name="schlday-loc" id="temp" class="custom-control-input" value="temp">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">In A Boarding House/Appartment/Dormitory</span>
+													</label>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+
+
+								<form name="stdnt-fam-info" class="" action="" method="">
+									<div class="row">
+										<div class="category-fam col-12">
+											<span>FAMILY BACKGROUND</span>
+										</div>
+									</div>
+
+
+									<div class="row">
+										<div class="col-3 offset-3">
+											<span id="prnt1">PARENT/GUARDIAN 1</span>
+										</div>
+										<div class="col-3 offset-2">
+											<span id="prnt2">PARENT/GUARDIAN 2</span>
+										</div>
+									</div>
+
+
+									<div class="row">
+										<div class="col-7">
+											<fieldset>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">NAME</span>
+													<input type="text" name="prnt1-nm" id="prnt1-nm" class="form-control" placeholder="Parent's Name" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">DATE OF BIRTH</span>
+													<input type="date" name="prnt1-dob" id="prnt1-age" class="form-control" aria-describedby="basic-addon1">
+														<input type="number" name="prnt1-age" id="prnt1-dob" class="form-control col-2" placeholder="Age"  aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">RELIGION</span>
+													<input type="text" name="prnt1-relg" id="prnt1-relg" class="form-control" placeholder="Religion" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">NATIONALITY</span>
+													<input type="text" name="prnt1-nat" id="prnt1-nat" class="form-control" placeholder="Parent's Nationality" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">PRESENT ADDRESS</span>
+													<input type="text" name="prnt1-addr" id="prnt1-addr" class="form-control" placeholder="Parent's Address" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">CONTACT #</span>
+													<input type="text" name="prnt1-cntct" id="prnt1-cntct" class="form-control" placeholder="Parent's Contact #" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">EDUCATIONAL ATTAINMENT</span>
+													<input type="text" name="prnt1-edu" id="prnt1-edu" class="form-control" placeholder="Parent's Educational Attainment" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">OCCUPATION</span>
+													<input type="text" name="prnt1-occ" id="prnt1-occ" class="form-control" placeholder="Parent's Occupation" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">EMPLOYER'S NAME</span>
+													<input type="text" name="prnt1-emplyr-nm" id="prnt1-emplyr-nm" class="form-control" placeholder="Parent's Employer" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">EMPLOYER'S ADDRESS</span>
+													<input type="text" name="prnt1-emplr-addr" id="prnt1-emplr-addr" class="form-control" placeholder="Address of Parent's Employer" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">OFFICE TEL. #</span>
+													<input type="text" name="prnt1-offc-num" id="prnt1-offc-num" class="form-control" placeholder="Parent's Office #" aria-describedby="basic-addon1">
+												</div>
+												<div class="input-group">
+													<span class="input-group-addon col-4 prnt-detail" id="basic-addon1">FREQUENCY OF INTERACTION</span>
+													<input type="text" name="prnt1-freq" id="prnt1-freq" class="form-control" placeholder="Frequency of Meetings" aria-describedby="basic-addon1">
+												</div>
+											</fieldset>
+										</div>
+
+
+										<div class="col-5">
+											<fieldset>
+													<div class="input-group">
+														<input type="text" name="prnt2-nm" id="prnt2-nm" class="form-control" placeholder="Parent's Name" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="date" name="prnt2-dob" id="prnt2-dob" class="form-control" aria-describedby="basic-addon1">
+														<input type="number" name="prnt2-age" id="prnt2-age" class="form-control col-2" placeholder="Age"  aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-relg" id="prnt2-relg" class="form-control" placeholder="Religion" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-nat" id="prnt2-nat" class="form-control" placeholder="Parent's Nationality" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-addr" id="prnt2-addr" class="form-control" placeholder="Parent's Address" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-cntc" id="prnt2-cntc" class="form-control" placeholder="Parent's Contact #" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-edu" id="prnt2-edu" class="form-control" placeholder="Parent's Educational Attainment" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-occ" id="prnt2-occ" class="form-control" placeholder="Parent's Occupation" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-emplyr-nm" id="prnt2-emplyr-nm" class="form-control" placeholder="Parent's Employer" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-emplyr-addr" id="prnt2-emplyr-addr" class="form-control" placeholder="Address of Parent's Employer" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-offc-num" id="prnt2-offc-num" class="form-control" placeholder="Parent's Office #" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group">
+														<input type="text" name="prnt2-freq" id="prnt2-freq" class="form-control" placeholder="Frequency of Meetings" aria-describedby="basic-addon1">
+													</div>
+											</fieldset>
+										</div>
+									</div>
+
+
+									<div class="row">
+										<div class="subcategory-sib col-12">
+											<span>SIBLING INFORMATION</span>
+										</div>
+									</div>
+
+
+									<div class="row sibs">
+										<div class="col-2 offset-1">
+											<span id="sib-nm">NAME <br> (eldest to youngest)</span>
+										</div>
+										<div class="col-1">
+											<span id="sib-age">AGE</span>
+										</div>
+										<div class="col-2">
+											<span id="sib-civstat">CIVIL STATUS</span>
+										</div>
+										<div class="col-3">
+											<span id="sib-schl-emplyr">SCHOOL/EMPLOYER</span>
+										</div>
+										<div class="col-3">
+											<span id="sib-yrlvl-occ">YEAR LEVEL/OCCUPATION</span>
+										</div>
+									</div>
+
+									<div id="newsib">
+										<div class="row" id="sibnum1">
+											<div class="input-group col-3">
+												<button type="button" id="sib-add1" value="1" onclick="addSib(this.value);">+</button>
+												<input type="text" name="sib-nm1" id="sib-nm1" class="form-control"  aria-describedby="basic-addon1">
+											</div>
+											<div class="input-group col-1">
+												<input type="text" name="sib-age1" id="sib-age1" class="form-control"  aria-describedby="basic-addon1">
+											</div>
+											<div class="input-group col-2">
+												<input type="text" name="sib-civstat1" id="sib-civstat1" class="form-control"  aria-describedby="basic-addon1">
+											</div>
+											<div class="input-group col-3">
+												<input type="text" name="sib-yrlvl-occ1" id="sib-yrlvl-occ1" class="form-control"  aria-describedby="basic-addon1">
+											</div>
+											<div class="input-group col-3">
+												<input type="text" name="sib-schl-emplyr1" id="sib-schl-emplyr1" class="form-control"  aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+
+
+									<div id=marriage>
+										<div class="row">
+											<div class="subcategory-mrrg col-12">
+												<span>MARRIAGE INFORMATION</span>
+											</div>
+										</div>
+
+
+										<div class="row">
+											<div class="col-6">
+												<fieldset>
+													<div class="input-group col-12">
+														<span class="input-group-addon col-5 mrrg-detail" id="basic-addon1">NAME OF SPOUSE</span>
+														<input type="text" class="form-control" id="sps-nm" placeholder="Name of Spouse" aria-describedby="basic-addon1">
+													</div>
+													<div class="col-1">
+													</div>
+													<div class="input-group col-12">
+														<span class="input-group-addon col-5 mrrg-detail" id="basic-addon1">OCCUPATION</span>
+														<input type="text" class="form-control" id="sps-occ" placeholder="Occupation of Spouse" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group col-12">
+														<span class="input-group-addon col-5 mrrg-detail" id="basic-addon1">YEARS MARRIED</span>
+														<input type="text" class="form-control" id="sps-tm" placeholder="Number of Years Married" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group col-12">
+														<span class="input-group-addon col-5 mrrg-detail" id="basic-addon1">EMPLOYER'S NAME</span>
+														<input type="text" class="form-control" id="sps-emplyr-nm" placeholder="Spouse's Employer" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group col-12">
+														<span class="input-group-addon col-5 mrrg-detail" id="basic-addon1">EMPLOYER'S CONTACT #</span>
+														<input type="text" class="form-control" id="sps-emplyr-cntc" placeholder="Spouse's Employer's Contact #" aria-describedby="basic-addon1">
+													</div>
+													<div class="input-group col-12">
+														<span class="input-group-addon col-5 mrrg-detail" id="basic-addon1">EMPLOYER'S ADDRESS</span>
+														<input type="text" class="form-control" id="sps-emplyr-addr" placeholder="Spouse's Employer's Address" aria-describedby="basic-addon1">
+													</div>
+												</fieldset>
+											</div>
+
+											<div class="col-6">
+
+												<div class="row col-12">
+													<div class="col-6 offset-1">
+														<span id="mychild-nm">NAME OF CHILDREN</span>
+													</div>
+													<div class="col">
+														<span id="mychild-dob">DATE OF BIRTH</span>
+													</div>
+												</div>
+
+
+												<div class="col-12" id="newchild">
+													<div class="row col-12" id="childnum1">
+														<div class="col-7">
+															<div class="input-group">
+																<button type="button" name="child-add1" id="child-add1" value="1" onclick="addChild(this.value);">+</button>
+																<input type="text" name="child-nm1" id="child-nm1" class="form-control" aria-describedby="basic-addon1">
+															</div>
+														</div>
+														<div class="col">
+															<div class="input-group">
+																<input type="text" name="child-dob1" id="child-dob1" class="form-control" aria-describedby="basic-addon1">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="row">
+										<div class="col-6">
+											<span id="prnt-stat">Parents' Civil Status</span>
+										</div>
+										<div class="col-6">
+											<span id="guard-tm">Longest Guardian</span>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-6">
+											<fieldset>
+												<div class="form-group">
+													<label class="custom-control custom-radio col-4">
+														<input id="married" value="Married" name="prnt-stat" type="radio" class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Married</span>
+													</label>
+
+														<div id="sub1">
+															<label class="custom-control custom-radio col-4 offset-1">
+																<input id="mrrd_tog" value="Together" name="prnt-substat1" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Living Together</span>
+															</label>
+															<label class="custom-control custom-radio col-4">
+																<input id="meed_sep" value="Separated" name="prnt-substat1" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Living Separately</span>
+															</label>
+														</div>
+
+														<div class="w-100"></div>
+
+													<label class="custom-control custom-radio">
+														<input id="separated" value="separated" name="prnt-stat" type="radio" class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Separated</span>
+													</label>
+
+														<div id="sub2">
+															<label class="custom-control custom-radio col-3 offset-1	">
+																<input id="lgllegally" value="legally" name="prnt-substat2" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Legally</span>
+															</label>
+															<label class="custom-control custom-radio col-3">
+																<input id="annl" value="annulled" name="prnt-substat2" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Annulled</span>
+															</label>
+															<label class="custom-control custom-radio col-3">
+																<input id="divrcd" value="divorced" name="prnt-substat2" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Divorced</span>
+															</label>
+														</div>
+
+														<div class="w-100"></div>
+
+													<label class="custom-control custom-radio">
+														<input id="livein" value="livein" name="prnt-stat" type="radio" class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Living-in</span>
+													</label>
+														<div class="w-100"></div>
+													<label class="custom-control custom-radio">
+														<input id="single-prnt" value="sngl-prnt" name="prnt-stat" type="radio" class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Single Parent</span>
+													</label>
+
+														<div id="sub3">
+															<label class="custom-control custom-radio col-4 offset-1">
+																<input id="mthr" value="mother" name="prnt-substat3" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Mother</span>
+															</label>
+															<label class="custom-control custom-radio col-4">
+																<input id="fthr" value="fthr" name="prnt-substat3" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Fathher</span>
+															</label>
+														</div>
+
+														<div class="w-100"></div>
+
+													<label class="custom-control custom-radio">
+														<input id="deceased" value="deceased" name="prnt-stat" type="radio" class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Deceased</span>
+													</label>
+
+														<div id="sub4">
+															<label class="custom-control custom-radio col-3 offset-1">
+																<input id="mthr" value="mother" name="prnt-substat4" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Mother</span>
+															</label>
+															<label class="custom-control custom-radio col-3">
+																<input id="fthr" value="father" name="prnt-substat4" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Father</span>
+															</label>
+															<label class="custom-control custom-radio col-3">
+																<input id="bth" value="both" name="prnt-substat4" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Both</span>
+															</label>
+														</div>
+
+														<div class="w-100"></div>
+
+													<label class="custom-control custom-radio">
+														<input id="prnt-civ-other" value="other" name="prnt-stat" type="radio" class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Other</span>
+
+														<div id="specific-prnt-civ">
+															<div class="form-group">
+																<input type="text" id="other-prnt-civ" placeholder="Please Specify">
+															</div>
+														</div>
+													</label>
+												</div>
+											</fieldset>
+										</div>
+
+										<div class="col-6">
+											<fieldset>
+												<div class="form-group">
+													<label class="custom-control custom-radio">
+														<input id="both-prnts" value="both" name="guard-tm" type="radio"  class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Both Parents</span>
+													</label>
+														<div class="w-100"></div>
+													<label class="custom-control custom-radio">
+														<input id="one-prnt" value="one" name="guard-tm" type="radio"  class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">One Parent</span>
+													</label>
+
+														<div id="sngl-guard">
+															<label class="custom-control custom-radio col-3 offset-1">
+																<input id="mthr" value="mother" name="prnt-substat4" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Mother</span>
+															</label>
+															<label class="custom-control custom-radio col-3">
+																<input id="fthr" value="father" name="prnt-substat4" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Father</span>
+															</label>
+														</div>
+
+														<div class="w-100"></div>
+													<label class="custom-control custom-radio">
+														<input id="sblngs" value="siblings" name="guard-tm" type="radio"  class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Sibling/s</span>
+													</label>
+
+														<div id="sblng-guard">
+															<label class="custom-control custom-radio col-3 offset-1">
+																<input id="brthr" value="mother" name="prnt-substat4" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Brother/s</span>
+															</label>
+															<label class="custom-control custom-radio col-3">
+																<input id="sistr" value="father" name="prnt-substat4" type="radio" class="custom-control-input">
+																<span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Sister/s</span>
+															</label>
+														</div>
+
+														<div class="w-100"></div>
+													<label class="custom-control custom-radio">
+														<input id="relatv" value="relativet" name="guard-tm" type="radio"  class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Relative/s</span>
+													</label>
+														<div class="w-100"></div>
+													<label class="custom-control custom-radio">
+														<input id="grndprnt" value="grand" name="guard-tm" type="radio"  class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Grandparent/s</span>
+													</label>
+														<div class="w-100"></div>
+													<label class="custom-control custom-radio">
+														<input id="guard-other" value="other" name="guard-tm" type="radio"  class="custom-control-input">
+														<span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Other</span>
+
+														<div id="specific-guard">
+															<div class="form-group">
+																<input type="text" id="other-guard" placeholder="Please Specify">
+															</div>
+														</div>
+													</label>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="input-group col-6">
+											<span class="input-group-addon col-6" id="basic-addon1">WHO ARE YOU CLOSEST WITH?</span>
+											<input type="text" class="form-control" id="clst-guard" placeholder="Closest Guardian" aria-describedby="basic-addon1">
+										</div>
+										<div class="input-group col-6">
+											<span class="input-group-addon col-6" id="basic-addon1">SPOKEN LANGUAGE AT HOME</span>
+											<input type="text" class="form-control" id="spkn-lng" placeholder="Spoken Language" aria-describedby="basic-addon1">
+										</div>
+									</div>
+								</form>
+
+								<div class="row">
+									<div class="subcategory-medical col-12">
+										<span>MEDICAL/HEALTH CONDITION</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col">
+										<span id="ill-birth">ILLNESSES/MEDICAL CONDITIONS DIAGNOSED SINCE BIRTH</span>
+									</div>
+
+									<div class="col">
+										<div id="new-ill-birth">
+											<div class="row" id="illbirthnum1">
+												<div class="col-11">
+													<div class="input-group">
+														<button type="button" id="illbirth-add1" value="1" onclick="addIllBirth(this.value);">+</button>
+														<input type="text" id="illbirth-nm1" class="form-control"  aria-describedby="basic-addon1">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col">
+										<span id="ill-three">ILLNESSES/MEDICAL CONDITIONS DIAGNOSED IN THE LAST THREE(3) YEARS</span>
+									</div>
+
+									<div class="col">
+										<div id="new-ill-curr">
+											<div class="row" id="illcurrnum1">
+												<div class="col-11">
+													<div class="input-group">
+														<button type="button" id="illcurr-add1" value="1" onclick="addIllCurr(this.value);">+</button>
+														<input type="text" id="illcurr-nm1" class="form-control"  aria-describedby="basic-addon1">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="row">
+									<div class="subcategory-emergency col-12">
+										<span>EMERGENCY CONTACT</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-12">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">NAME</span>
+											<input type="text" id="emrgncycntct-nm" class="form-control" placeholder="Contact's Name" aria-describedby="basic-addon1">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">RELATIONSHIP</span>
+											<input type="text" id="emrgncycntct-rel" class="form-control" placeholder="Relationship" aria-describedby="basic-addon1">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">ADDRESS</span>
+											<input type="text" id="emrgncycntct-addr" class="form-control" placeholder="Contact's Address" aria-describedby="basic-addon1">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">CONTACT #</span>
+											<input type="text" id="emrgncycntct-num" class="form-control" placeholder="Contact's Number" aria-describedby="basic-addon1">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="input-group">
+											<span class="input-group-addon col-2" id="basic-addon1">E-MAIL</span>
+											<input type="text" id="emrgncycntct-email" class="form-control" placeholder="Contact's E-Mail" aria-describedby="basic-addon1">
+										</div>
+									</div>
+								</div>
+
+								<form class="edu-info" action="" method="">
+
+									<div class="row">
+										<div class="category-edu col-12">
+											<span>EDUCATIONAL BACKGROUND</span>
+										</div>
+									</div>
+
+
+									<div class="row edu-stages">
+										<div class="col offset-3">
+											<span>ELEMENTARY</span>
+										</div>
+										<div class="col">
+											<span>SECONDARY</span>
+										</div>
+										<div class="col">
+											<span>SENIOR HIGH</span>
+										</div>
+									</div>
+
+
+									<div class="row">
+										<div class="col-6">
+											<fieldset>
+												<div class="col-12">
+													<div class="input-group">
+														<span class="input-group-addon col-6" id="basic-addon1">YEAR OF GRADUATION</span>
+														<input type="text" id="elmnt-yr" class="form-control" placeholder="Year of Graduation" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<span class="input-group-addon col-6" id="basic-addon1">NAME OF SCHOOL</span>
+														<input type="text" id="elmnt-nm" class="form-control" placeholder="Name of School" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<span class="input-group-addon col-6" id="basic-addon1">SCHOOL ADDRESS</span>
+														<input type="text" id="elmt-addr" class="form-control" placeholder="Address of School" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<span class="input-group-addon col-6" id="basic-addon1">RECOGNITIONS/AWARDS</span>
+														<input type="text" id="elmnt-awrd" class="form-control" placeholder="Recognitions/Awards" aria-describedby="basic-addon1">
+													</div>
+												</div>
+											</fieldset>
+										</div>
+
+
+										<div class="col-3">
+											<fieldset>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="scndry-yr" class="form-control" placeholder="Year of Graduation" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="scndry-nm" class="form-control" placeholder="Name of School" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="scndry-addr" class="form-control" placeholder="Address of School" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="scndry-awrd" class="form-control" placeholder="Recognitions/Awards" aria-describedby="basic-addon1">
+													</div>
+												</div>
+											</fieldset>
+										</div>
+
+
+										<div class="col-3">
+											<fieldset>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="srhigh-yr" class="form-control" placeholder="Year of Graduation" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="srhigh-nm" class="form-control" placeholder="Name of School" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="srhigh-addr" class="form-control" placeholder="Address of School" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<input type="text" id="srhigh-awrd" class="form-control" placeholder="Recognitions/Awards" aria-describedby="basic-addon1">
+													</div>
+												</div>
+											</fieldset>
+										</div>
+
+									</div>
+
+
+									<div class="row">
+										<div class="subcategory-lastcollg col-12">
+											<span>LAST COLLEGE/UNIVERSITY ATTENDED</span>
+										</div>
+									</div>
+
+									<div class="row">
+
+										<div class="col">
+											<fieldset>
+												<div class="col-12">
+													<div class="input-group">
+														<span class="input-group-addon col-3" id="basic-addon1">NAME OF INSTITUTION</span>
+														<input type="text" name="collg-nm" class="form-control" placeholder="Name of Institution" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<span class="input-group-addon col-3" id="basic-addon1">SCHOOL ADDRESS</span>
+														<input type="text" name="collg-addr" class="form-control" placeholder="Address of Institution" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="row align-items-center">
+													<div class="input-group col-6">
+														<span class="input-group-addon" id="basic-addon1">INCLUSIVE DATES</span>
+														<input type="date" name="collg-from" class="form-control" aria-describedby="basic-addon1">
+													</div>
+													<div class="col-1">
+														<span>to</span>
+													</div>
+													<div class="input-group col-5">
+														<input type="date" name="collg-to" class="form-control" aria-describedby="basic-addon1">
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="input-group">
+														<span class="input-group-addon col-3" id="basic-addon1">RECOGNITIONS/AWARDS</span>
+														<input type="text" name="collg-awrd" class="form-control" placeholder="Recognitions/Awards" aria-describedby="basic-addon1">
+													</div>
+												</div>
+											</fieldset>
+										</div>
+
+									</div>
+								</form>
+
+								<div class="row">
+									<div class="subcategory-affl col-6">
+										<span>CURRENT ORGANIZATIONS/AFFILIATIONS</span>
+									</div>
+									<div class="subcategory-affl-position col-6">
+										<span>POSITION HELD</span>
+									</div>
+								</div>
+
+								<div class="col-12" id="new-affl">
+									<div class="row" id="afflnum1">
+										<div class="input-group col-6">
+											<button type="button" id="affl-add1" value="1" onclick="addAffl(this.value);">+</button>
+											<input type="text" id="affl-nm1" class="form-control"  aria-describedby="basic-addon1">
+										</div>
+										<div class="input-group col-6">
+											<input type="text" id="affl-post1" class="form-control"  aria-describedby="basic-addon1">
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="subcategory-reasons col-12">
+										<span>REASONS FOR WANTING TO STUDY IN ATENEO DE NAGA UNIVERSITY</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-12">
+										<textarea id="reasons" rows="10" cols="200"></textarea>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-4">
+										<span id="decider">Who decided that you study in ADNU?</span>
+									</div>
+									<div class="col-4">
+										<span id="skills">INTERESTS/SPECIAL TALENTS/SKILLS</span>
+									</div>
+									<div class="col-4">
+										<span id="hobbies">HOBBIES/LIESURE TIME ACTIVITIES</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-4">
+										<div class="input-group">
+											<input type="text" id="dcd-fctr" class="form-control" placeholder="Deciding Factor" aria-describedby="basic-addon1">
+										</div>
+									</div>
+									<div class="col-4" id="newskill">
+										<div class="input-group" id="skillnum1">
+											<button type="button" id="skill-add1" value="1" onclick="addSkill(this.value);">+</button>
+											<input type="text" id="skill-nm1" class="form-control"  aria-describedby="basic-addon1">
+										</div>
+									</div>
+									<div class="col-4" id="newhobby">
+										<div class="input-group" id="hobbynum1">
+											<button type="button" id="hobby-add1" value="1" onclick="addHobby(this.value);">+</button>
+											<input type="text" id="hobby-nm1" class="form-control"  aria-describedby="basic-addon1">
+										</div>
+									</div>
+								</div>
+
+								<div class="row" id="end">
+									<div class="col-12">
+										<button type="submit" class="btn btn-outline-primary col-12" id="login">SUBMIT</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

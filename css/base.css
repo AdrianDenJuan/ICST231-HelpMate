@@ -1,0 +1,87 @@
+html
+{
+	min-height: 100%;
+}
+
+body
+{
+	min-height: 100%;
+	background: #ffffff; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#ffffff, #ffffcc); /*Safari 5.1-6*/
+	background: -o-linear-gradient(#ffffff, #ffffcc); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(#ffffff, #ffffcc); /*Fx 3.6-15*/
+	background: linear-gradient(#ffffff, #ffffcc); /*Standard*/
+}
+
+.container
+{
+	height: 100%;
+	padding: 0px;
+}
+
+.container-fluid
+{
+	height: 100%;
+	padding: 0px;
+}
+
+.row
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.header
+{
+	width: 100vw;
+	height: 10vh;
+	position: fixed;
+	z-index: 9999999;
+	background-color: #ffffff;
+	border-bottom: 2px solid #cccccc;
+	box-shadow: 10px 10px 100px #33bbff;
+}
+
+span#cgc
+{
+	font-size: 6vh;
+	font-weight: bold;
+	padding-left: 1vw;
+}
+
+.user
+{
+	margin-left: 1vh;
+	margin-top: 2.5vh;
+}
+
+img#profile
+{
+	width: 60px;
+	height: 60px;
+	padding: 5px;
+	border-radius: 50%;
+	background-color: #505050;
+}
+
+.body
+{
+	padding: 10vh 0px 0px 0px;
+}
+
+span#name
+{
+	font-size: 2vh;
+	margin-left: 1vw;
+}
+
+.sidebar
+{
+	height: 90vh;
+	position: fixed;
+	z-index: 9999999;
+	padding-top: 3vh;
+	text-align: center;
+	background-color: white;
+	box-shadow: 5px -4px 5px -5px #333;
+}

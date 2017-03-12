@@ -1,0 +1,224 @@
+.spf
+{
+	margin-top: 5vh;
+	padding: 0 0 2vh 00;
+	border-radius: 20px;
+	box-shadow: 1px 1px 100px #808080;
+}
+
+.spf .row
+{
+	margin: 10px 0px 10px 0px;
+}
+
+.row .category
+{
+	margin: 0px;
+}
+
+.category-prsnl
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #000000;
+	border-radius: 20px 20px 0 0;
+}
+
+.nos
+{
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+}
+
+#uplded-img
+{
+	width: 192px;
+	height: 192px;
+	padding-top: 150px;
+	text-align: center;
+	background-color: #ffffff;
+	background-size: 192px 192px;
+	background-repeat: no-repeat;
+	background-image: url("../images/logo.png");
+}
+
+fieldset.sex
+{
+	margin: 2vh 0 0 0;
+}
+
+span#sex
+{
+	font-size: 1.8vh;
+	font-weight: bold;
+	padding-left: 2vw;
+	margin: 0 2vw 0 0;
+}
+
+span#civ, span#adm, span#emp, span#loc, span#prnt1, span#prnt2
+{
+	font-size: 1.8vh;
+	font-weight: bold;
+}
+
+div#specific-civ
+{
+	display: none;
+	margin-left: 10px;
+}
+
+div#emplyr-info
+{
+	display: none;
+}
+
+.category-fam
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #000000;
+}
+
+.subcategory-sib
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #808080;
+}
+
+.sibs{
+	text-align: center;
+	font-size: 1.8vh;
+	font-weight: bold;
+}
+
+#newsib
+{
+	margin-left: 1vw;
+}
+
+div#marriage
+{
+	display: none;
+}
+
+.subcategory-mrrg
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #808080;
+}
+
+span#mychild-nm, span#mychild-dob
+{
+	font-size: 1.8vh;
+	font-weight: bold;
+}
+
+span#prnt-stat, span#guard-tm, span#bff, span#dialect
+{
+	font-size: 1.8vh;
+	font-weight: bold;
+}
+
+div#sub1, div#sub2, div#sub3, div#sub4
+{
+	display: none;
+}
+
+div#specific-prnt-civ, div#specific-guard
+{
+	display: none;
+	margin-left: 1vw;
+}
+
+div#sngl-guard, div#sblng-guard
+{
+	display: none;
+}
+
+.subcategory-medical
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #808080;
+}
+
+span#ill-birth, span#ill-three
+{
+	font-size: 1.5vh;
+	font-weight: bold;
+	text-align: center;
+}
+
+.subcategory-emergency
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #808080;
+}
+
+.category-edu
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #000000;
+}
+
+.edu-stages
+{
+	font-size: 1.8vh;
+	font-weight: bold;
+	text-align: center;
+}
+
+.subcategory-lastcollg, .subcategory-affl, .subcategory-affl-position, .subcategory-reasons
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #808080;
+}
+
+textarea#reasons
+{
+	max-height: 15vh;
+	max-width: 100%;
+}
+
+.subcategory-lastcollg, .subcategory-affl, .subcategory-affl-position, .subcategory-reasons
+{
+	color: #ffffff;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+	background-color: #808080;
+}
+
+span#decider, span#skills, span#hobbies
+{
+	font-size: 1.5vh;
+	font-weight: bold;
+	text-align: center;
+}
+
+div#end
+{
+	margin-top: 5vh;
+}

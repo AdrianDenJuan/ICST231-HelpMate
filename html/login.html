@@ -4,8 +4,11 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/base.css" rel="stylesheet">
 		<link href="../css/login.css" rel="stylesheet">
+
 		<link rel="icon" href="../images/icon.png">
 		<title>HelpMate Login</title>
 	</head>
@@ -15,35 +18,50 @@
 
 		<div class="container">
 
-			<div class="row banner cols-lg-12 cols-md-12 cols-sm-12 cols-xs-12">
-				<p>Welcome to HelpMate!</p>
-				<span>Guiding Students to Guidance</span>
+			<div class="row">
+				<div class="welcome col">
+					<span id="msg">Welcome to HelpMate!<br /></span>
+					<span id="motto">Guiding Students to Guidance</span>
+				</div>
 			</div>
 
-			<div class="row logo cols-lg-12 cols-md-12 cols-sm-12 cols-xs-12">
-				<img src="../images/logo.png" alt="BOOP">
+
+			<div class="row">
+				<div class="logo col">
+					<img src="../images/logo.png" alt="../images/logo.png" class="rounded mx-auto d-block">
+				</div>
 			</div>
 
-			<div class="row login cols-lg-12 cols-md-12 cols-sm-12 cols-xs-12">
-				<form class="login-form">
-					<label for="">Enter Your Details</label>
-				  	<div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon" id="basic-addon1">Username</span>
-							<input type="text" class="form-control" placeholder="Username">
+
+			<div class="row">
+				<div class="login col-6 offset-3">
+					<form class="login-form" action="index.html" method="post">
+
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">USERNAME</span>
+								<input type="text" class="form-control" id="usr-name" placeholder="Username" aria-describedby="basic-addon1">
+							</div>
 						</div>
-					</div>
 
-					<div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon" id="basic-addon1">Password</span>
-							<input type="password" class="form-control" placeholder="Password">
+
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">PASSWORD</span>
+								<input type="password" class="form-control" id="psswrd" placeholder="Password" aria-describedby="basic-addon1">
+							</div>
 						</div>
-					</div>
 
-					<button type="submit" class="btn btn-primary">Login</button>
-				</form>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-outline-primary col-12" id="login">LOGIN</button>
+						</div>
+
+					</form>
+				</div>
 			</div>
+
 		</div>
+
 	</body>
 </html>
