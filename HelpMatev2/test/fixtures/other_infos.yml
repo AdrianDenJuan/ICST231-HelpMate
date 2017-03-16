@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  n_condition: MyText
+  condition_temp: MyText
+  langugage: MyString
+  long_guard: MyString
+  pform_id: 1
+
+two:
+  n_condition: MyText
+  condition_temp: MyText
+  langugage: MyString
+  long_guard: MyString
+  pform_id: 1

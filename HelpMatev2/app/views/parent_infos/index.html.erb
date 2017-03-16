@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parent Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Relate</th>
+      <th>Birth date</th>
+      <th>Age</th>
+      <th>Religion</th>
+      <th>Nationality</th>
+      <th>Present add</th>
+      <th>Contact no</th>
+      <th>Educ attain</th>
+      <th>Occp</th>
+      <th>Emp name</th>
+      <th>Emp addr</th>
+      <th>Freqinteract</th>
+      <th>Civil stat</th>
+      <th>Pform</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parent_infos.each do |parent_info| %>
+      <tr>
+        <td><%= parent_info.name %></td>
+        <td><%= parent_info.relate %></td>
+        <td><%= parent_info.birth_date %></td>
+        <td><%= parent_info.age %></td>
+        <td><%= parent_info.religion %></td>
+        <td><%= parent_info.nationality %></td>
+        <td><%= parent_info.present_add %></td>
+        <td><%= parent_info.contact_no %></td>
+        <td><%= parent_info.educ_attain %></td>
+        <td><%= parent_info.occp %></td>
+        <td><%= parent_info.emp_name %></td>
+        <td><%= parent_info.emp_addr %></td>
+        <td><%= parent_info.freqInteract %></td>
+        <td><%= parent_info.civil_stat %></td>
+        <td><%= parent_info.pform_id %></td>
+        <td><%= link_to 'Show', parent_info %></td>
+        <td><%= link_to 'Edit', edit_parent_info_path(parent_info) %></td>
+        <td><%= link_to 'Destroy', parent_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parent Info', new_parent_info_path %>

@@ -1,0 +1,92 @@
+<%= form_for(parent_info) do |f| %>
+  <% if parent_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parent_info.errors.count, "error") %> prohibited this parent_info from being saved:</h2>
+
+      <ul>
+      <% parent_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :relate %>
+    <%= f.text_field :relate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birth_date %>
+    <%= f.date_select :birth_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :religion %>
+    <%= f.text_field :religion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :present_add %>
+    <%= f.text_field :present_add %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_no %>
+    <%= f.text_field :contact_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :educ_attain %>
+    <%= f.text_field :educ_attain %>
+  </div>
+
+  <div class="field">
+    <%= f.label :occp %>
+    <%= f.text_field :occp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_name %>
+    <%= f.text_field :emp_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_addr %>
+    <%= f.text_field :emp_addr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :freqInteract %>
+    <%= f.text_field :freqInteract %>
+  </div>
+
+  <div class="field">
+    <%= f.label :civil_stat %>
+    <%= f.text_field :civil_stat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pform_id %>
+    <%= f.number_field :pform_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

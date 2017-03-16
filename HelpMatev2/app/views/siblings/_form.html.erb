@@ -1,0 +1,47 @@
+<%= form_for(sibling) do |f| %>
+  <% if sibling.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sibling.errors.count, "error") %> prohibited this sibling from being saved:</h2>
+
+      <ul>
+      <% sibling.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :civil_stat %>
+    <%= f.text_field :civil_stat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :schooloremp %>
+    <%= f.text_field :schooloremp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :yrlvloroccp %>
+    <%= f.text_field :yrlvloroccp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pform_id %>
+    <%= f.number_field :pform_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

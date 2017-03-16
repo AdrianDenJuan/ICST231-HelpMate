@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spouse.name %>
+</p>
+
+<p>
+  <strong>Occp:</strong>
+  <%= @spouse.occp %>
+</p>
+
+<p>
+  <strong>Yrs married:</strong>
+  <%= @spouse.yrs_married %>
+</p>
+
+<p>
+  <strong>Emp name:</strong>
+  <%= @spouse.emp_name %>
+</p>
+
+<p>
+  <strong>Emp addr:</strong>
+  <%= @spouse.emp_addr %>
+</p>
+
+<p>
+  <strong>Emp con no:</strong>
+  <%= @spouse.emp_con_no %>
+</p>
+
+<p>
+  <strong>Pform:</strong>
+  <%= @spouse.pform_id %>
+</p>
+
+<%= link_to 'Edit', edit_spouse_path(@spouse) %> |
+<%= link_to 'Back', spouses_path %>

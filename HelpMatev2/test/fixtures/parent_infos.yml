@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  relate: MyString
+  birth_date: 2017-03-15
+  age: 1
+  religion: MyString
+  nationality: MyString
+  present_add: MyString
+  contact_no: MyString
+  educ_attain: MyString
+  occp: MyString
+  emp_name: MyString
+  emp_addr: MyString
+  freqInteract: MyString
+  civil_stat: MyString
+  pform_id: 1
+
+two:
+  name: MyString
+  relate: MyString
+  birth_date: 2017-03-15
+  age: 1
+  religion: MyString
+  nationality: MyString
+  present_add: MyString
+  contact_no: MyString
+  educ_attain: MyString
+  occp: MyString
+  emp_name: MyString
+  emp_addr: MyString
+  freqInteract: MyString
+  civil_stat: MyString
+  pform_id: 1
