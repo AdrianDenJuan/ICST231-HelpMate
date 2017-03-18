@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  occp: MyString
+  yrs_married: 1
+  emp_name: MyString
+  emp_addr: MyString
+  emp_con_no: MyString
+  pform_id: 1
+
+two:
+  name: MyString
+  occp: MyString
+  yrs_married: 1
+  emp_name: MyString
+  emp_addr: MyString
+  emp_con_no: MyString
+  pform_id: 1

@@ -1,0 +1,2 @@
+module HelpmateHelper
+end

@@ -1,0 +1,47 @@
+<%= form_for(contact_emerg) do |f| %>
+  <% if contact_emerg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact_emerg.errors.count, "error") %> prohibited this contact_emerg from being saved:</h2>
+
+      <ul>
+      <% contact_emerg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :relate %>
+    <%= f.text_field :relate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr %>
+    <%= f.text_field :addr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_no %>
+    <%= f.text_field :contact_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email_add %>
+    <%= f.text_field :email_add %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pform_id %>
+    <%= f.number_field :pform_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

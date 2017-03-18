@@ -1,4 +1,15 @@
-# ICST231-HelpMate
-A Web Development Project for the Ateneo de Naga University's College Guidance Center
+# ICST231 - Helpmate
 
---> testing push and commit
+## Members:
+1. Adrian Olivan
+2. Carl Ferddie Sabater
+3. Czar Ramon Bragas
+4. Justfer Fernandez
+
+### MAJOR REVISION:
+
+1. moved initial uploads of CSS, HTML and etc to an old folder.
+2. Moving rails project HelpMatev2 
+	* personal information form with family background information
+
+

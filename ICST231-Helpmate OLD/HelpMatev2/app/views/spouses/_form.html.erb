@@ -1,0 +1,52 @@
+<%= form_for(spouse) do |f| %>
+  <% if spouse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spouse.errors.count, "error") %> prohibited this spouse from being saved:</h2>
+
+      <ul>
+      <% spouse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :occp %>
+    <%= f.text_field :occp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :yrs_married %>
+    <%= f.number_field :yrs_married %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_name %>
+    <%= f.text_field :emp_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_addr %>
+    <%= f.text_field :emp_addr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_con_no %>
+    <%= f.text_field :emp_con_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pform_id %>
+    <%= f.number_field :pform_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

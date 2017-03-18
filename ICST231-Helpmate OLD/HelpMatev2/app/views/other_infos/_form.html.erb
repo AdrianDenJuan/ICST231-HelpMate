@@ -1,0 +1,42 @@
+<%= form_for(other_info) do |f| %>
+  <% if other_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(other_info.errors.count, "error") %> prohibited this other_info from being saved:</h2>
+
+      <ul>
+      <% other_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :n_condition %>
+    <%= f.text_area :n_condition %>
+  </div>
+
+  <div class="field">
+    <%= f.label :condition_temp %>
+    <%= f.text_area :condition_temp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :langugage %>
+    <%= f.text_field :langugage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :long_guard %>
+    <%= f.text_field :long_guard %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pform_id %>
+    <%= f.number_field :pform_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fname</th>
+      <th>Mi</th>
+      <th>Lname</th>
+      <th>Coursemajor</th>
+      <th>Student</th>
+      <th>Year level</th>
+      <th>Photoloc</th>
+      <th>Perm address</th>
+      <th>Pres address</th>
+      <th>Contact no</th>
+      <th>Email</th>
+      <th>Birth date</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th>P of birth</th>
+      <th>Nationality</th>
+      <th>Civil stat</th>
+      <th>Admis type</th>
+      <th>Emp name</th>
+      <th>Emp addr</th>
+      <th>Emp cont no</th>
+      <th>Yr w emp</th>
+      <th>Faveplace</th>
+      <th>Curr work</th>
+      <th>Posheld</th>
+      <th>Reason4adnu</th>
+      <th>Whodecide</th>
+      <th>Hobbies</th>
+      <th>Dateacccom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pforms.each do |pform| %>
+      <tr>
+        <td><%= pform.fname %></td>
+        <td><%= pform.mi %></td>
+        <td><%= pform.lname %></td>
+        <td><%= pform.coursemajor %></td>
+        <td><%= pform.student_id %></td>
+        <td><%= pform.year_level %></td>
+        <td><%= pform.photoloc %></td>
+        <td><%= pform.perm_address %></td>
+        <td><%= pform.pres_address %></td>
+        <td><%= pform.contact_no %></td>
+        <td><%= pform.email %></td>
+        <td><%= pform.birth_date %></td>
+        <td><%= pform.age %></td>
+        <td><%= pform.sex %></td>
+        <td><%= pform.p_of_birth %></td>
+        <td><%= pform.nationality %></td>
+        <td><%= pform.civil_stat %></td>
+        <td><%= pform.admis_type %></td>
+        <td><%= pform.emp_name %></td>
+        <td><%= pform.emp_addr %></td>
+        <td><%= pform.emp_cont_no %></td>
+        <td><%= pform.yr_w_emp %></td>
+        <td><%= pform.faveplace %></td>
+        <td><%= pform.curr_work %></td>
+        <td><%= pform.posHeld %></td>
+        <td><%= pform.reason4AdNU %></td>
+        <td><%= pform.whoDecide %></td>
+        <td><%= pform.hobbies %></td>
+        <td><%= pform.dateAcccom %></td>
+        <td><%= link_to 'Show', pform %></td>
+        <td><%= link_to 'Edit', edit_pform_path(pform) %></td>
+        <td><%= link_to 'Destroy', pform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pform', new_pform_path %>

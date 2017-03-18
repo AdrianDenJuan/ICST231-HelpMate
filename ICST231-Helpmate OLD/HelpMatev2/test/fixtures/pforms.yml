@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fname: MyString
+  mi: MyString
+  lname: MyString
+  coursemajor: MyString
+  student_id: 1
+  year_level: MyString
+  photoloc: MyString
+  perm_address: MyString
+  pres_address: MyString
+  contact_no: MyString
+  email: MyString
+  birth_date: 2017-03-15
+  age: 1
+  sex: MyString
+  p_of_birth: MyString
+  nationality: MyString
+  civil_stat: MyString
+  admis_type: MyString
+  emp_name: MyString
+  emp_addr: MyString
+  emp_cont_no: MyString
+  yr_w_emp: 1
+  faveplace: MyString
+  curr_work: MyString
+  posHeld: MyString
+  reason4AdNU: MyString
+  whoDecide: MyString
+  hobbies: MyString
+  dateAcccom: MyString
+
+two:
+  fname: MyString
+  mi: MyString
+  lname: MyString
+  coursemajor: MyString
+  student_id: 1
+  year_level: MyString
+  photoloc: MyString
+  perm_address: MyString
+  pres_address: MyString
+  contact_no: MyString
+  email: MyString
+  birth_date: 2017-03-15
+  age: 1
+  sex: MyString
+  p_of_birth: MyString
+  nationality: MyString
+  civil_stat: MyString
+  admis_type: MyString
+  emp_name: MyString
+  emp_addr: MyString
+  emp_cont_no: MyString
+  yr_w_emp: 1
+  faveplace: MyString
+  curr_work: MyString
+  posHeld: MyString
+  reason4AdNU: MyString
+  whoDecide: MyString
+  hobbies: MyString
+  dateAcccom: MyString

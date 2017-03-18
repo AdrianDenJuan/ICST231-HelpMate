@@ -1,0 +1,162 @@
+<%= form_for(pform) do |f| %>
+  <% if pform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pform.errors.count, "error") %> prohibited this pform from being saved:</h2>
+
+      <ul>
+      <% pform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fname %>
+    <%= f.text_field :fname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mi %>
+    <%= f.text_field :mi %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lname %>
+    <%= f.text_field :lname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :coursemajor %>
+    <%= f.text_field :coursemajor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :student_id %>
+    <%= f.number_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year_level %>
+    <%= f.text_field :year_level %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photoloc %>
+    <%= f.text_field :photoloc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :perm_address %>
+    <%= f.text_field :perm_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pres_address %>
+    <%= f.text_field :pres_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_no %>
+    <%= f.text_field :contact_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birth_date %>
+    <%= f.date_select :birth_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= f.label :p_of_birth %>
+    <%= f.text_field :p_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :civil_stat %>
+    <%= f.text_field :civil_stat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :admis_type %>
+    <%= f.text_field :admis_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_name %>
+    <%= f.text_field :emp_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_addr %>
+    <%= f.text_field :emp_addr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emp_cont_no %>
+    <%= f.text_field :emp_cont_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :yr_w_emp %>
+    <%= f.number_field :yr_w_emp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :faveplace %>
+    <%= f.text_field :faveplace %>
+  </div>
+
+  <div class="field">
+    <%= f.label :curr_work %>
+    <%= f.text_field :curr_work %>
+  </div>
+
+  <div class="field">
+    <%= f.label :posHeld %>
+    <%= f.text_field :posHeld %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reason4AdNU %>
+    <%= f.text_field :reason4AdNU %>
+  </div>
+
+  <div class="field">
+    <%= f.label :whoDecide %>
+    <%= f.text_field :whoDecide %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hobbies %>
+    <%= f.text_field :hobbies %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dateAcccom %>
+    <%= f.text_field :dateAcccom %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module ContactEmergsHelper
+end

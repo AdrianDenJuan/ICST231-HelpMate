@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Other Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>N condition</th>
+      <th>Condition temp</th>
+      <th>Langugage</th>
+      <th>Long guard</th>
+      <th>Pform</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @other_infos.each do |other_info| %>
+      <tr>
+        <td><%= other_info.n_condition %></td>
+        <td><%= other_info.condition_temp %></td>
+        <td><%= other_info.langugage %></td>
+        <td><%= other_info.long_guard %></td>
+        <td><%= other_info.pform_id %></td>
+        <td><%= link_to 'Show', other_info %></td>
+        <td><%= link_to 'Edit', edit_other_info_path(other_info) %></td>
+        <td><%= link_to 'Destroy', other_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Other Info', new_other_info_path %>

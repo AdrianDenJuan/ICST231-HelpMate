@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>N condition:</strong>
+  <%= @other_info.n_condition %>
+</p>
+
+<p>
+  <strong>Condition temp:</strong>
+  <%= @other_info.condition_temp %>
+</p>
+
+<p>
+  <strong>Langugage:</strong>
+  <%= @other_info.langugage %>
+</p>
+
+<p>
+  <strong>Long guard:</strong>
+  <%= @other_info.long_guard %>
+</p>
+
+<p>
+  <strong>Pform:</strong>
+  <%= @other_info.pform_id %>
+</p>
+
+<%= link_to 'Edit', edit_other_info_path(@other_info) %> |
+<%= link_to 'Back', other_infos_path %>

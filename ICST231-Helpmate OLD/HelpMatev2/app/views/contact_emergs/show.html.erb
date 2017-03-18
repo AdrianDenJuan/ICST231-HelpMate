@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact_emerg.name %>
+</p>
+
+<p>
+  <strong>Relate:</strong>
+  <%= @contact_emerg.relate %>
+</p>
+
+<p>
+  <strong>Addr:</strong>
+  <%= @contact_emerg.addr %>
+</p>
+
+<p>
+  <strong>Contact no:</strong>
+  <%= @contact_emerg.contact_no %>
+</p>
+
+<p>
+  <strong>Email add:</strong>
+  <%= @contact_emerg.email_add %>
+</p>
+
+<p>
+  <strong>Pform:</strong>
+  <%= @contact_emerg.pform_id %>
+</p>
+
+<%= link_to 'Edit', edit_contact_emerg_path(@contact_emerg) %> |
+<%= link_to 'Back', contact_emergs_path %>

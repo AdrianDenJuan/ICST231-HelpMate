@@ -1,0 +1,47 @@
+<%= form_for(educ_info) do |f| %>
+  <% if educ_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(educ_info.errors.count, "error") %> prohibited this educ_info from being saved:</h2>
+
+      <ul>
+      <% educ_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :level %>
+    <%= f.number_field :level %>
+  </div>
+
+  <div class="field">
+    <%= f.label :yr_grad %>
+    <%= f.number_field :yr_grad %>
+  </div>
+
+  <div class="field">
+    <%= f.label :school_addr %>
+    <%= f.text_field :school_addr %>
+  </div>
+
+  <div class="field">
+    <%= f.label :recogawards %>
+    <%= f.text_area :recogawards %>
+  </div>
+
+  <div class="field">
+    <%= f.label :educ_type %>
+    <%= f.text_field :educ_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pform_id %>
+    <%= f.number_field :pform_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

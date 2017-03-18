@@ -1,0 +1,253 @@
+
+<h1> Personal Information Form </h1>
+<%= form_for(@pform, :url => helpmate_newrec_path, :html => {:method => "post"}) do |f| %>
+
+  <div class="field">
+    <%= f.label "First Name" %>
+    <%= f.text_field :fname, placeholder: "First Name"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label "MI" %>
+    <%= f.text_field :mi, placeholder: "MI" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Last Name" %>
+    <%= f.text_field :lname, placeholder: "Last Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Course and Major"%>
+    <%= f.text_field :coursemajor, placeholder: "Course and Major" %>
+  </div>
+<h2> Hide this </h2>
+  <div class="field">
+    <%= f.label :student_id %>
+    <%= f.number_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Year Level" %>
+    <%= f.text_field :year_level, placeholder: "Year Level" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Permanent Address" %>
+    <%= f.text_field :perm_address, placeholder: "Permanent Address" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Present Address" %>
+    <%= f.text_field :pres_address, placeholder: "Present Address" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Contact Number" %>
+    <%= f.text_field :contact_no, placeholder: "Contact Number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Email" %>
+    <%= f.text_field :email, placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Birth Date" %>
+    <%= f.date_field :birth_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Age" %>
+    <%= f.number_field :age, placeholder: "Age" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Gender" %>
+     <%= label :sex, 'Male' %>
+    <%= f.radio_button :sex, 'Male', :checked => true %> 
+    <%= label :sex, 'Female' %> 
+    <%= f.radio_button :sex, 'Female' %> 
+  </div>
+
+  <div class="field">
+    <%= f.label "Place of Birth" %>
+    <%= f.text_field :p_of_birth, placeholder: "Birth Place" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Nationality" %>
+    <%= f.text_field :nationality, placeholder: "Nationality" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Civil Status" %>
+    <%= f.text_field :civil_stat, placeholder: "Civil Status" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Admission Classification" %>
+    <%= label :admis_type, 'New Enrolee' %>
+    <%= f.radio_button :admis_type, 'New Enrolee', :checked => true %>
+    <%= label :admis_type, 'Cross Enrolee' %>
+    <%= f.radio_button :admis_type, 'Cross Enrolee' %>
+    <%= label :admis_type, 'Re-Admitted' %>
+    <%= f.radio_button :admis_type, 'Re-Admitted'%>
+    <%= label :admis_type, 'Degree Holder' %>
+    <%= f.radio_button :admis_type, 'Degree Holder' %>
+    <%= label :admis_type, 'Transferee' %>
+    <%= f.radio_button :admis_type, 'Transferee' %>
+    <%= label :admis_type, 'Short-term Course' %>
+    <%= f.radio_button :admis_type, 'Short-term Course'%>    
+  </div>
+
+  <div class="field">
+    <%= f.label "Employer Name" %>
+    <%= f.text_field :emp_name, placeholder: "Employer Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Employer Address" %>
+    <%= f.text_field :emp_addr, placeholder: "Employer Address" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Employer Contact Number" %>
+    <%= f.text_field :emp_cont_no, placeholder: "Employer Contact Number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Year's with employer" %>
+    <%= f.number_field :yr_w_emp, placeholder: "Year's with employer" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Favorite place" %>
+    <%= f.text_field :faveplace, placeholder: "Favorite Place" %>
+  </div>
+
+  <h1> Family Background Section </h1>
+  <% x = 0 %>
+  <% 2.times do %>
+    <%= f.fields_for @parents[x] do |p| %>
+    <% if x == 0  %>
+      <h1> Father </h1> 
+    <% else %>
+    <h1> Mother </h1> 
+    <% end %> 
+  <div class="field">
+    <%= p.label "Name" %>
+    <%= text_field_tag 'names[]', nil, :placeholder => 'Name' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Relationship" %>
+    <%= text_field_tag 'relates[]', nil, :placeholder => 'Relationship' %>
+  </div>
+  <div class="field">
+    <%= p.label "Birth_Date" %>
+    <%= date_field_tag 'bdates[]' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Age" %>
+    <%= number_field_tag 'ages[]', nil, :placeholder => '18' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Religion" %>
+    <%= text_field_tag 'religions[]', nil, :placeholder => 'Religion' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Nationality" %>
+    <%= text_field_tag 'nationalities[]', nil, :placeholder => 'Nationality' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Present Address" %>
+    <%= text_field_tag 'present_adds[]', nil, :placeholder => 'Present Address' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Contact Number" %>
+    <%= text_field_tag 'contact_nos[]', nil, :placeholder => 'Contact Number' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Educational Attainment" %>
+    <%= text_field_tag 'educ_attains[]', nil, :placeholder => 'Educational Attainment' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Occupation" %>
+    <%= text_field_tag 'occps[]', nil, :placeholder => 'Occupation' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Employer's Name" %>
+    <%= text_field_tag 'emp_names[]', nil, :placeholder => 'Employer\'s Name' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Employer's Address" %>
+    <%= text_field_tag 'emp_addrs[]', nil, :placeholder => 'Employer\'s Address' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Frequency of Interaction" %>
+    <%= label :freqInteract, "Always" %>
+    <%= radio_button_tag 'freqInteracts[]', 'Always', :checked => true %>
+    <%= label :freqInteract, "Sometimes" %>
+    <%= radio_button_tag 'freqInteracts[]', 'Sometimes' %>
+    <%= label :freqInteract, "Never" %>
+    <%= radio_button_tag 'freqInteracts[]', 'Never' %>
+  </div>
+
+  <div class="field">
+    <%= p.label "Civil Status" %>
+    <%= text_field_tag 'civil_stats[]' %>
+  </div>
+    <% end %>
+    <% x = x + 1 %> 
+  <% end %>
+  <h1> Sibling Section </h1>
+
+  <h1> Medical Information </h1>
+  <h1> Emergency Contact </h1>
+  <h1> Educational Background </h1>
+
+  <div class="field">
+    <%= f.label "Current Work" %>
+    <%= f.text_field :curr_work %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Position Held" %>
+    <%= f.text_field :posHeld %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Reason for choosing AdNU" %>
+    <%= f.text_field :reason4AdNU %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Who Decided?" %>
+    <%= f.text_field :whoDecide %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Hobbies" %>
+    <%= f.text_field :hobbies %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Date Accomplished" %>
+    <%= f.text_field :dateAcccom %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
