@@ -13,9 +13,15 @@ class HelpmateController < ApplicationController
 		2.times do
 			@parents << ParentInfo.new
 		end
+
+		@siblings = []
+		4.times do
+			@siblings << Sibling.new
+		end
 	end
 
 	def createrec
+		#Personal Information Form
 		@pform = Pform.new()
 		@pform.fname = params[:pform][:fname]
 		@pform.mi = params[:pform][:mi]
@@ -42,7 +48,7 @@ class HelpmateController < ApplicationController
 		@pform.faveplace = params[:pform][:faveplace]
 		@pform.save
 
-
+		#Family background information
 		parent_names = params[:names]
 		parent_relates = params[:relates]
 		parent_ages = params[:ages]
@@ -55,7 +61,9 @@ class HelpmateController < ApplicationController
 		parent_occps = params[:occps]
 		parent_empname = params[:emp_names]
 		parent_empadd = params[:emp_addrs]
-		parent_freqInters = params[:freqInteracts]
+		parent_freqInters = []
+		parent_freqInters << params[:freqInteracts0]
+		parent_freqInters << params[:freqInteracts1]
 		parent_civilstats = params[:civil_stats]
 
 		@parents = []
@@ -83,8 +91,30 @@ class HelpmateController < ApplicationController
 				p.save
 				x = x + 1
 			end
-	
+		
+		sibling_name = params[:namesib]
+		sibling_age = params[:agesib]
+		sibling_cstat = params[:civil_statsib]
+		sibling_schooloremp = params[:schoolorempsib]
+		sibling_yrlvlorocc = params[:yrlvloroccpsib]
 
+		@siblings = []
+
+		4.times do 
+			@siblings << Sibling.new
+		end
+
+		x = 0
+			@siblings.each do |s|
+				s.name = sibling_name[x]
+				s.age = sibling_age[x]
+				s.civil_stat = sibling_cstat[x]
+				s.schooloremp = sibling_schooloremp[x]
+				s.yrlvloroccp = sibling_yrlvlorocc[x]
+				s.pform_id = @pform.id
+				s.save
+				x = x + 1
+			end
 		redirect_to '/helpmate'
 
 

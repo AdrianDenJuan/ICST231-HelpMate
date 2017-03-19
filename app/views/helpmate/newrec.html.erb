@@ -21,11 +21,6 @@
     <%= f.label "Course and Major"%>
     <%= f.text_field :coursemajor, placeholder: "Course and Major" %>
   </div>
-<h2> Hide this </h2>
-  <div class="field">
-    <%= f.label :student_id %>
-    <%= f.number_field :student_id %>
-  </div>
 
   <div class="field">
     <%= f.label "Year Level" %>
@@ -127,91 +122,125 @@
   </div>
 
   <h1> Family Background Section </h1>
-  <% x = 0 %>
-  <% 2.times do %>
-    <%= f.fields_for @parents[x] do |p| %>
-    <% if x == 0  %>
-      <h1> Father </h1> 
-    <% else %>
-    <h1> Mother </h1> 
-    <% end %> 
-  <div class="field">
-    <%= p.label "Name" %>
-    <%= text_field_tag 'names[]', nil, :placeholder => 'Name' %>
-  </div>
+    <% x = 0 %>
+    <% 2.times do %>
+      <%= f.fields_for @parents[x] do |p| %>
+        <% if x == 0  %>
+          <h2> Father </h2> 
+        <% else %>
+        <h2> Mother </h2> 
+        <% end %> 
+        <div class="field">
+        <%= p.label "Name" %>
+        <%= text_field_tag 'names[]', nil, :placeholder => 'Name' %>
+        </div>
 
-  <div class="field">
-    <%= p.label "Relationship" %>
-    <%= text_field_tag 'relates[]', nil, :placeholder => 'Relationship' %>
-  </div>
-  <div class="field">
-    <%= p.label "Birth_Date" %>
-    <%= date_field_tag 'bdates[]' %>
-  </div>
+        <div class="field">
+        <%= p.label "Relationship" %>
+        <%= text_field_tag 'relates[]', nil, :placeholder => 'Relationship' %>
+        </div>
 
-  <div class="field">
-    <%= p.label "Age" %>
-    <%= number_field_tag 'ages[]', nil, :placeholder => '18' %>
-  </div>
+       <div class="field">
+       <%= p.label "Birth_Date" %>
+      <%= date_field_tag 'bdates[]' %>
+       </div>
 
-  <div class="field">
-    <%= p.label "Religion" %>
-    <%= text_field_tag 'religions[]', nil, :placeholder => 'Religion' %>
-  </div>
+      <div class="field">
+        <%= p.label "Age" %>
+        <%= number_field_tag 'ages[]', nil, :placeholder => '18' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Nationality" %>
-    <%= text_field_tag 'nationalities[]', nil, :placeholder => 'Nationality' %>
-  </div>
+      <div class="field">
+        <%= p.label "Religion" %>
+        <%= text_field_tag 'religions[]', nil, :placeholder => 'Religion' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Present Address" %>
-    <%= text_field_tag 'present_adds[]', nil, :placeholder => 'Present Address' %>
-  </div>
+      <div class="field">
+        <%= p.label "Nationality" %>
+        <%= text_field_tag 'nationalities[]', nil, :placeholder => 'Nationality' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Contact Number" %>
-    <%= text_field_tag 'contact_nos[]', nil, :placeholder => 'Contact Number' %>
-  </div>
+      <div class="field">
+        <%= p.label "Present Address" %>
+        <%= text_field_tag 'present_adds[]', nil, :placeholder => 'Present Address' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Educational Attainment" %>
-    <%= text_field_tag 'educ_attains[]', nil, :placeholder => 'Educational Attainment' %>
-  </div>
+      <div class="field">
+        <%= p.label "Contact Number" %>
+        <%= text_field_tag 'contact_nos[]', nil, :placeholder => 'Contact Number' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Occupation" %>
-    <%= text_field_tag 'occps[]', nil, :placeholder => 'Occupation' %>
-  </div>
+      <div class="field">
+        <%= p.label "Educational Attainment" %>
+        <%= text_field_tag 'educ_attains[]', nil, :placeholder => 'Educational Attainment' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Employer's Name" %>
-    <%= text_field_tag 'emp_names[]', nil, :placeholder => 'Employer\'s Name' %>
-  </div>
+      <div class="field">
+        <%= p.label "Occupation" %>
+        <%= text_field_tag 'occps[]', nil, :placeholder => 'Occupation' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Employer's Address" %>
-    <%= text_field_tag 'emp_addrs[]', nil, :placeholder => 'Employer\'s Address' %>
-  </div>
+      <div class="field">
+        <%= p.label "Employer's Name" %>
+        <%= text_field_tag 'emp_names[]', nil, :placeholder => 'Employer\'s Name' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Frequency of Interaction" %>
-    <%= label :freqInteract, "Always" %>
-    <%= radio_button_tag 'freqInteracts[]', 'Always', :checked => true %>
-    <%= label :freqInteract, "Sometimes" %>
-    <%= radio_button_tag 'freqInteracts[]', 'Sometimes' %>
-    <%= label :freqInteract, "Never" %>
-    <%= radio_button_tag 'freqInteracts[]', 'Never' %>
-  </div>
+      <div class="field">
+        <%= p.label "Employer's Address" %>
+        <%= text_field_tag 'emp_addrs[]', nil, :placeholder => 'Employer\'s Address' %>
+      </div>
 
-  <div class="field">
-    <%= p.label "Civil Status" %>
-    <%= text_field_tag 'civil_stats[]' %>
-  </div>
+      <div class="field">
+        <%= p.label "Frequency of Interaction" %>
+        <%= label :freqInteract, "Always" %>
+        <%= radio_button_tag "freqInteracts#{x}", 'Always' %>
+        <%= label :freqInteract, "Sometimes" %>
+        <%= radio_button_tag "freqInteracts#{x}", 'Sometimes' %>
+        <%= label :freqInteract, "Never" %>
+        <%= radio_button_tag "freqInteracts#{x}", 'Never' %>
+      </div>
+
+      <div class="field">
+        <%= p.label "Civil Status" %>
+        <%= text_field_tag 'civil_stats[]', nil, :placeholder => 'Civil Status' %>
+      </div>
     <% end %>
     <% x = x + 1 %> 
   <% end %>
+
+
   <h1> Sibling Section </h1>
+  <% si = 0 %>
+    <% 4.times do %>
+      <h2> Sibling <%= si+1 %> </h2>
+      <%= f.fields_for @siblings[si] do |s| %>
+        <div class="field">
+          <%= s.label "Name" %>
+          <%= text_field_tag 'namesib[]', nil, :placeholder => 'Name'%>
+        </div>
+
+        <div class="field">
+          <%= s.label "Age" %>
+          <%= number_field_tag 'agesib[]', nil, :placeholder => '18' %>
+        </div>
+
+        <div class="field">
+          <%= s.label "Civil Status" %>
+          <%= text_field_tag 'civil_statsib[]', nil, :placeholder => 'Civil Status' %>
+        </div>
+
+        <div class="field">
+          <%= s.label "School or Company" %>
+          <%= text_field_tag 'schoolorempsib[]', nil, :placeholder => 'School or Company' %>
+        </div>
+
+        <div class="field">
+          <%= s.label "Year Level or occupation" %>
+          <%= text_field_tag 'yrlvloroccpsib[]', nil, :placeholder => 'Year Level or Occupation' %>
+        </div>
+    <% end %>
+    <% si = si + 1 %>
+  <% end %>
 
   <h1> Medical Information </h1>
   <h1> Emergency Contact </h1>
