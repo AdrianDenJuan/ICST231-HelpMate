@@ -1,3 +1,3 @@
 class EducInfo < ApplicationRecord
-	belongs_to :pforms
+	belongs_to :pform
 end

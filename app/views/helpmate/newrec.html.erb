@@ -125,11 +125,7 @@
     <% x = 0 %>
     <% 2.times do %>
       <%= f.fields_for @parents[x] do |p| %>
-        <% if x == 0  %>
-          <h2> Father </h2> 
-        <% else %>
-        <h2> Mother </h2> 
-        <% end %> 
+        <h2> Parent/Guardian <%= x+1 %> </h2>
         <div class="field">
         <%= p.label "Name" %>
         <%= text_field_tag 'names[]', nil, :placeholder => 'Name' %>
@@ -242,10 +238,83 @@
     <% si = si + 1 %>
   <% end %>
 
-  <h1> Medical Information </h1>
-  <h1> Emergency Contact </h1>
-  <h1> Educational Background </h1>
 
+
+ <h1> Medical Information </h1>
+ 	<%= f.fields_for :other_infos do |s| %>
+  	<div class="field">
+    <%= s.label "Medical Conditions diagnosed since birth" %>
+    <%= text_area_tag 'condition', nil, :placeholder => 'Medical Conditions diagnosed since birth' %>
+  	</div>
+
+  	<div class="field">
+    <%= s.label "Medical Conditions diagnosed in the last 3 years" %>
+    <%= text_area_tag 'con', nil, :placeholder => 'Medical Conditions diagnosed in the last 3 years' %>
+ 	 </div>
+ 	 <% end %>
+  <h1> Emergency Contact </h1>
+
+ 	<%= f.fields_for :contact_emergs do |s| %>
+    <div class="field">
+    <%= s.label "Name" %>
+    <%= text_field_tag :name,nil, placeholder: "Name" %>
+  	</div>
+
+  	<div class="field">
+    <%= s.label "Relationship" %>
+    <%= text_field_tag :relate,nil, placeholder: "Relationship" %>
+  	</div>
+
+  	<div class="field">
+    <%= s.label "Address" %>
+    <%= text_field_tag :addr,nil, placeholder: "Address" %>
+  	</div>
+
+  	<div class="field">
+    <%= s.label "Contact Number " %>
+    <%= text_field_tag :contact_no,nil, placeholder: "Contact Number" %>
+  	</div>
+
+  	<div class="field">
+    <%= s.label "Email Address" %>
+    <%= text_field_tag :email_add,nil, placeholder: "Email Address" %>
+  	</div>
+
+
+  <% end %>
+
+
+  <h1> Educational Background </h1>
+   <% ei = 0 %>
+    <% 3.times do %>
+      <%= f.fields_for @educ[ei] do |e| %>
+        <% if ei == 0 %>
+          <h2>Elementary</h2>
+        <% elsif ei == 1 %>
+          <h2>Secondary</h2>
+        <% else %>
+          <h2>Senior High School</h2>
+        <% end %>
+
+        <div class="field">
+          <%= e.label "Year Graduated" %>
+          <%= number_field_tag 'yr_grads[]', nil, :placeholder => 'Year Graduated' %>
+        </div>
+
+        <div class="field">
+          <%= e.label "School Address" %>
+          <%= text_field_tag 'school_addrs[]', nil, :placeholder => 'School Address' %>
+        </div>
+
+        <div class="field">
+          <%= e.label "Recognitions and Awards" %>
+          <%= text_area_tag 'recogawardS[]', nil, :placeholder => 'Recognitions or Awards Here.' %>
+        </div>
+
+      <% end %>
+        <% ei = ei + 1 %>
+    <% end %>
+    
   <div class="field">
     <%= f.label "Current Work" %>
     <%= f.text_field :curr_work %>

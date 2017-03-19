@@ -18,6 +18,11 @@ class HelpmateController < ApplicationController
 		4.times do
 			@siblings << Sibling.new
 		end
+
+		@educ = []
+		3.times do
+			@educ << EducInfo.new
+		end
 	end
 
 	def createrec
@@ -47,6 +52,48 @@ class HelpmateController < ApplicationController
 		@pform.yr_w_emp = params[:pform][:yr_w_emp]
 		@pform.faveplace = params[:pform][:faveplace]
 		@pform.save
+
+		@contact_emergs = ContactEmerg.new()
+		@contact_emergs.name = params[:name]
+		@contact_emergs.relate = params[:relate]
+		@contact_emergs.addr = params[:addr]
+		@contact_emergs.contact_no = params[:contact_no]
+		@contact_emergs.email_add = params[:email_add]
+		@contact_emergs.pform_id = @pform.id
+		@contact_emergs.save
+
+		@other_infos = OtherInfo.new()
+		@other_infos.n_condition = params[:condition]
+		@other_infos.condition_temp = params[:con]
+		@other_infos.pform_id = @pform.id
+		@other_infos.save	
+
+		@educ = []
+		3.times do
+			@educ << EducInfo.new
+		end
+
+		educ_yrG = params[:yr_grads]
+		educ_addr = params[:school_addrs]
+		educ_RecAward = params[:recogawardS]
+
+		ei = 0
+		@educ.each do |e|
+			e.yr_grad = educ_yrG[ei]
+			e.school_addr = educ_addr[ei]
+
+			if ei == 0
+				e.educ_type = "Elementary"
+			elsif ei == 1
+				e.educ_type = "Secondary"
+			else
+				e.educ_type = "Senior High School"
+			end 
+			e.recogawards = educ_RecAward[ei]
+			e.pform_id = @pform.id
+			e.save
+			ei = ei + 1
+		end
 
 		#Family background information
 		parent_names = params[:names]
@@ -116,7 +163,6 @@ class HelpmateController < ApplicationController
 				x = x + 1
 			end
 		redirect_to '/helpmate'
-
 
 	end
 end

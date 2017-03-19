@@ -1,3 +1,3 @@
 class ContactEmerg < ApplicationRecord
-	belongs_to :pforms
+	belongs_to :pform
 end

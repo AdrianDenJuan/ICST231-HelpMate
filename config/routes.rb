@@ -2,6 +2,7 @@ Rails.application.routes.draw do
  post 'helpmate/newrec' => 'helpmate#createrec'
  get 'helpmate' => 'helpmate#index'
  get 'helpmate/newrec' => 'helpmate#newrec'
+ get 'cafer/justfer/overadrian' => 'helpmate#newrec'
   resources :contact_emergs
   resources :other_infos
   resources :parent_infos

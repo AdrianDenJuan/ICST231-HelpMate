@@ -1,3 +1,3 @@
 class Child < ApplicationRecord
-	belongs_to :pforms
+	belongs_to :pform
 end
