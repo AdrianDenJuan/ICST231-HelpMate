@@ -10,7 +10,6 @@ class HelpmateController < ApplicationController
 		@student = Student.find(params[:stuid])
 		@concern = Conversation.find(params[:convid])
 
-		
 	end
 	def newconcern
 		@user = User.find(params[:hereid])
