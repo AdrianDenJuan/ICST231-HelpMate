@@ -6,6 +6,7 @@ class Pform < ApplicationRecord
 	has_many :children
 	has_many :parent_infos 
 	has_one :other_info
+	belongs_to :student
  	accepts_nested_attributes_for :siblings
  	accepts_nested_attributes_for :contact_emerg
  	accepts_nested_attributes_for :spouse

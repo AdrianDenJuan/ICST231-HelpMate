@@ -8,7 +8,7 @@
       <th>Fname</th>
       <th>Mi</th>
       <th>Lname</th>
-      <th>Staff type</th>
+      <th>User ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= student.fname %></td>
         <td><%= student.mi %></td>
         <td><%= student.lname %></td>
-        <td><%= student.staff_type %></td>
+        <td><%= student.user_id %> </td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,0 +1,47 @@
+<%= form_for(@users, :url => helpmate_register_path, :html => {:method => "post"}) do |f| %>
+
+<h1> Helpmate Registration Form </h1>
+  <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label "User Type" %>
+     <%= label :user_type, 'student' %>
+    <%= f.radio_button :user_type, 'student', :checked => true %> 
+    <%= label :user_type, 'staff' %> 
+    <%= f.radio_button :user_type, 'staff' %> 
+  </div>
+
+    <%= f.fields_for @students do |s| %>
+      <div class="field">
+        <%= s.label "First Name" %>
+        <%= text_field_tag 'fname', nil, :placeholder => 'First Name'%>
+      </div>
+      <div class="field">
+        <%= s.label "Middle Initial" %>
+        <%= text_field_tag 'mi', nil, :placeholder => 'Middle Initial'%>
+      </div>
+      <div class="field">
+        <%= s.label "Last Name" %>
+        <%= text_field_tag 'lname', nil, :placeholder => 'Last Name' %>
+      </div>
+
+<p>If you are a staff, please fill out this information </p>
+  
+      <div class="field">
+        <%= s.label "Department" %>
+        <%= text_field_tag 'department', nil, :placeholder => 'Department' %>
+      </div>
+<% end %>
+
+  <div class="actions">
+    <%= f.submit "Sign Up"%>
+  </div>
+  <% end %>

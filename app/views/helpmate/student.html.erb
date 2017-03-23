@@ -1,7 +1,9 @@
 
+<h1> Hello, <%= @user.username %> </h1>
 <p><a href = "/helpmate"> Log Out </a></p>
-<p><a href = "/helpmate/newrec"> Create Personal Information Form </a></p>
-<p><a href = "/helpmate/studentrec"> Create Student Record Form </a></p>
+<p><%= link_to "Create Personal Information Form", helpmate_newrec_path('hereid' => @user.id) %></p>
+<p><%= link_to "View Personal Information Form", helpmate_pformshow_path('hereid' => @user.id) %></p>
+<p><%= link_to "View List of Concerns", helpmate_concern_path('hereid' => @user.id)%></p>
+<p><%= link_to "Post a concern", helpmate_newconcern_path('hereid' => @user.id)%></p>
 
-<p><%= @user.id %></p>
 <%= link_to 'Back to login page', helpmate_path %> 

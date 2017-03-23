@@ -1,10 +1,47 @@
 class HelpmateController < ApplicationController
 	def index
-		@pforms = Pform.all
 		@users = User.new
 	end
 	def error
 
+	end
+
+	def register
+		@users = User.new
+		@students = Student.new
+		@councilor = Councilor.new
+	end
+
+	def createuser
+		@users = User.new
+		@students = Student.new
+		@councilor = Councilor.new
+
+		@users.username = params[:user][:username]
+		@users.password = params[:user][:password]
+		@users.user_type = params[:user][:user_type]
+		@users.save
+
+		if(@users.user_type == "student") then
+			@students.fname = params[:fname]
+			@students.mi = params[:mi]
+			@students.lname = params[:lname]
+			@students.user_id = @users.id
+			@students.save
+		
+		elsif(@users.user_type = "staff") then
+			@councilor.fname = params[:fname]
+			@councilor.mi = params[:mi]
+			@councilor.lname = params[:lname]
+			@councilor.department = params[:department]
+			@councilor.user_id = @users.id
+			@councilor.save
+	end
+
+		redirect_to '/helpmate'
+	end
+
+	def concern
 	end
 	def identify
 		@users = User.new
@@ -32,6 +69,8 @@ class HelpmateController < ApplicationController
 	end
 
 	def newrec
+		@user = User.new
+		@user = User.find(params[:hereid])
 		@pform = Pform.new
 		
 		@parents = []
@@ -52,6 +91,8 @@ class HelpmateController < ApplicationController
 	end
 
 	def createrec
+		@users = User.new
+		@users = User.find(params[:usr_id])
 		#Personal Information Form
 		@pform = Pform.new()
 		@pform.fname = params[:pform][:fname]
@@ -69,6 +110,7 @@ class HelpmateController < ApplicationController
 		@pform.age = params[:pform][:age]
 		@pform.sex = params[:pform][:sex]
 		@pform.p_of_birth = params[:pform][:p_of_birth]
+		@pform.student_id = params[:stu_id]
 		@pform.nationality = params[:pform][:nationality]
 		@pform.civil_stat = params[:pform][:civil_stat]
 		@pform.admis_type = params[:pform][:admis_type]
@@ -188,7 +230,12 @@ class HelpmateController < ApplicationController
 				s.save
 				x = x + 1
 			end
-		redirect_to '/helpmate'
+
+			if(@users.user_type == "student")
+				redirect_to "/helpmate/student/#{@users.id}"
+			elsif(@users.user_type == "staff")
+				redirect_to "/helpmate/staff/#{@users.id}"
+			end
 
 	end
 end

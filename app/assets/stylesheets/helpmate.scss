@@ -1,3 +1,69 @@
 // Place all the styles related to the helpmate controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.main{
+    margin-top: 50px;
+}
+
+.main-content {
+/*    background-color:#009edf;*/
+    border: 2px solid #009edf;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px 40px;
+    color: #ccc;
+    text-shadow: none;
+
+}
+
+
+.input-group{
+	margin: 20px 0px;
+}
+.input-group-addon {
+    color: #009edf ;
+    font-size: 17px;
+}
+.login-button{
+    margin: 0px auto;
+    max-width: 200px;;
+    
+}
+
+
+.form-header{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #009edf;
+    color: #fff;
+    width: 100% ;
+    padding: 20px 0px;
+    border-top-right-radius:10px ;
+    border-top-left-radius:10px; 
+    font-style: italic;
+    font-family: "Verdana", Verdana, sans-serif;
+}
+.remember{
+    color: black;
+}
+
+.button{
+	background-color: #f44842;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-top-right-radius:10px ;
+    border-top-left-radius:10px; 
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    display: inline-block;
+    font-size: 16px;
+
+}
+

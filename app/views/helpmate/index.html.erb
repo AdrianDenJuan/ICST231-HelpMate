@@ -1,11 +1,22 @@
-<h1> Helpmate Login Page </h1>
+<section class="login-info">
+<div class="container">
+	<div class ="row">
+		<div class ="form-header">
+			<h1><center> Helpmate Login Page </center></h1>
+		</div>
+	<div class="main-content">
 
-
+	<div class="input-group">
 <%= form_for(@users, :url => helpmate_path, :html => {:method => "post"}) do |f| %>
-  <%= f.label "username:" %>
+  <%= f.label "Username:" %>
   <%= text_field_tag :username %>
+  <%= f.label "Password:" %>
   <%= password_field_tag :password %>
-  <%= f.submit "Login" %>
+  <br>
+  <br>
+  <%= f.submit "Login", :class => "button" %>
 <% end %>
-
+<br>
 <a href = "/helpmate/register" > Register </a>
+
+</div>
