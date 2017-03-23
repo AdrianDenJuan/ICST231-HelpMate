@@ -23369,3 +23369,968 @@ Processing by PformsController#index as HTML
 Completed 200 OK in 199ms (Views: 193.1ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 14:46:21 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  Rendered helpmate/student.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 773ms (Views: 715.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 14:46:23 +0800
+  
+AbstractController::ActionNotFound (The action 'getpform' could not be found for HelpmateController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+clearance (1.15.1) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.0ms)
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 14:46:25 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  Rendered helpmate/student.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 163ms (Views: 157.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 14:52:56 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.6ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (131.0ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `student_id' for nil:NilClass):
+    2: <h1> Hello, <%= @user.username %> </h1>
+    3: <p><a href = "/helpmate"> Log Out </a></p>
+    4: <% @studentrec = Student.where("user_id = ?", @user.id).first %>
+    5: <% if (!@studentrec.pform.student_id.present?) %>
+    6: <p><%= link_to "Create Personal Information Form", helpmate_newrec_path('hereid' => @user.id) %></p>
+    7: <% else %>
+    8: <p><%= link_to "Edit Personal Information Form", helpmate_newrec_path('hereid' => @user.id) %></p>
+  
+app/views/helpmate/student.html.erb:5:in `_app_views_helpmate_student_html_erb__1810363327830392721_70187144423720'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.6ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (133.2ms)
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 14:53:29 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  Rendered helpmate/student.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/justferfernandez/Desktop/ICST231-HelpMate/app/views/helpmate/student.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/helpmate/student.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.6ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.5ms)
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 14:53:40 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 165ms (Views: 159.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 14:56:57 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.6ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 304ms (Views: 256.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/pforms" for ::1 at 2017-03-23 14:57:13 +0800
+Processing by PformsController#index as HTML
+  Rendering pforms/index.html.erb within layouts/application
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT "pforms".* FROM "pforms"[0m
+  Rendered pforms/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 131ms (Views: 126.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/helpmate/newrec?hereid=6" for ::1 at 2017-03-23 14:57:15 +0800
+Processing by HelpmateController#newrec as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/newrec.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered helpmate/newrec.html.erb within layouts/application (191.0ms)
+Completed 200 OK in 423ms (Views: 304.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/helpmate/newrec" for ::1 at 2017-03-23 14:57:22 +0800
+Processing by HelpmateController#createrec as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "pform"=>{"fname"=>"iydsiuyui", "mi"=>"ytuiytiuyi", "lname"=>"", "coursemajor"=>"", "year_level"=>"", "perm_address"=>"", "pres_address"=>"", "contact_no"=>"", "email"=>"", "birth_date"=>"", "age"=>"", "sex"=>"Male", "p_of_birth"=>"", "nationality"=>"", "civil_stat"=>"", "admis_type"=>"New Enrolee", "emp_name"=>"", "emp_addr"=>"", "emp_cont_no"=>"", "yr_w_emp"=>"", "faveplace"=>"", "curr_work"=>"", "posHeld"=>"", "reason4AdNU"=>"", "whoDecide"=>"", "hobbies"=>"", "dateAcccom"=>""}, "names"=>["", ""], "relates"=>["", ""], "bdates"=>["", ""], "ages"=>["", ""], "religions"=>["", ""], "nationalities"=>["", ""], "present_adds"=>["", ""], "contact_nos"=>["", ""], "educ_attains"=>["", ""], "occps"=>["", ""], "emp_names"=>["", ""], "emp_addrs"=>["", ""], "civil_stats"=>["", ""], "namesib"=>["", "", "", ""], "agesib"=>["", "", "", ""], "civil_statsib"=>["", "", "", ""], "schoolorempsib"=>["", "", "", ""], "yrlvloroccpsib"=>["", "", "", ""], "condition"=>"", "con"=>"", "name"=>"", "relate"=>"", "addr"=>"", "contact_no"=>"", "email_add"=>"", "yr_grads"=>["", "", ""], "school_addrs"=>["", "", ""], "recogawardS"=>["", "", ""], "stu_id"=>"1", "usr_id"=>"6", "commit"=>"Create Personal Information Form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "pforms" ("fname", "mi", "lname", "coursemajor", "student_id", "year_level", "perm_address", "pres_address", "contact_no", "email", "sex", "p_of_birth", "nationality", "civil_stat", "admis_type", "emp_name", "emp_addr", "emp_cont_no", "faveplace", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "iydsiuyui"], ["mi", "ytuiytiuyi"], ["lname", ""], ["coursemajor", ""], ["student_id", 1], ["year_level", ""], ["perm_address", ""], ["pres_address", ""], ["contact_no", ""], ["email", ""], ["sex", "Male"], ["p_of_birth", ""], ["nationality", ""], ["civil_stat", ""], ["admis_type", "New Enrolee"], ["emp_name", ""], ["emp_addr", ""], ["emp_cont_no", ""], ["faveplace", ""], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "contact_emergs" ("name", "relate", "addr", "contact_no", "email_add", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["relate", ""], ["addr", ""], ["contact_no", ""], ["email_add", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "other_infos" ("n_condition", "condition_temp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n_condition", ""], ["condition_temp", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "educ_infos" ("school_addr", "recogawards", "educ_type", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["school_addr", ""], ["recogawards", ""], ["educ_type", "Elementary"], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "educ_infos" ("school_addr", "recogawards", "educ_type", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["school_addr", ""], ["recogawards", ""], ["educ_type", "Secondary"], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "educ_infos" ("school_addr", "recogawards", "educ_type", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["school_addr", ""], ["recogawards", ""], ["educ_type", "Senior High School"], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "parent_infos" ("name", "relate", "religion", "nationality", "present_add", "educ_attain", "occp", "emp_name", "emp_addr", "civil_stat", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["relate", ""], ["religion", ""], ["nationality", ""], ["present_add", ""], ["educ_attain", ""], ["occp", ""], ["emp_name", ""], ["emp_addr", ""], ["civil_stat", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "parent_infos" ("name", "relate", "religion", "nationality", "present_add", "educ_attain", "occp", "emp_name", "emp_addr", "civil_stat", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["relate", ""], ["religion", ""], ["nationality", ""], ["present_add", ""], ["educ_attain", ""], ["occp", ""], ["emp_name", ""], ["emp_addr", ""], ["civil_stat", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["civil_stat", ""], ["schooloremp", ""], ["yrlvloroccp", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["civil_stat", ""], ["schooloremp", ""], ["yrlvloroccp", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["civil_stat", ""], ["schooloremp", ""], ["yrlvloroccp", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["civil_stat", ""], ["schooloremp", ""], ["yrlvloroccp", ""], ["pform_id", 51], ["created_at", 2017-03-23 06:57:22 UTC], ["updated_at", 2017-03-23 06:57:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/helpmate/student/6
+Completed 302 Found in 180ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 14:57:22 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 146ms (Views: 141.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pforms" for ::1 at 2017-03-23 15:08:28 +0800
+Processing by PformsController#index as HTML
+  Rendering pforms/index.html.erb within layouts/application
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT "pforms".* FROM "pforms"[0m
+  Rendered pforms/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 198ms (Views: 194.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 15:17:59 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE (user_id = '6')[0m
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Student::ActiveRecord_Relation:0x007fab6fbada70>
+Did you mean?  ids):
+  
+app/controllers/helpmate_controller.rb:52:in `getpform'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.0ms)
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 15:23:51 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE (user_id = '6')[0m
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Student::ActiveRecord_Relation:0x007fab6fdcbe10>
+Did you mean?  ids):
+  
+app/controllers/helpmate_controller.rb:52:in `getpform'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.2ms)
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 15:24:43 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE (user_id = '6')[0m
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `fname' for #<Student::ActiveRecord_Relation:0x007fab6d63baa8>):
+  
+app/controllers/helpmate_controller.rb:52:in `getpform'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.2ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.3ms)
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 15:26:28 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE (user_id = '6')[0m
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Student::ActiveRecord_Relation:0x007fab6d2fac18>
+Did you mean?  ids):
+  
+app/controllers/helpmate_controller.rb:52:in `getpform'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.2ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (124.8ms)
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 15:26:38 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "students"."id" FROM "students" WHERE (user_id = '6')[0m
+Completed 406 Not Acceptable in 203ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::UnknownFormat (HelpmateController#getpform is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+clearance (1.15.1) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.9ms)
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 15:27:04 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 406 Not Acceptable in 199ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionController::UnknownFormat (HelpmateController#getpform is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+clearance (1.15.1) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.2ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.9ms)
+Started GET "/helpmate/pformshow?hereid=6" for ::1 at 2017-03-23 15:29:11 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/helpmate/pformshow"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [128 times] (80.6ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.6ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (259.4ms)
+Started GET "/helpmate" for ::1 at 2017-03-23 15:29:12 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 183ms (Views: 146.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 15:29:13 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 117ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 15:29:24 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"just", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'just' and password = '12345') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/helpmate/student/1" for ::1 at 2017-03-23 15:29:24 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 1) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `pform' for nil:NilClass):
+    2: <h1> Hello, <%= @user.username %> </h1>
+    3: <p><a href = "/helpmate"> Log Out </a></p>
+    4: <% @studentrec = Student.where("user_id = ?", @user.id).first %>
+    5: <% if (!@studentrec.pform.present?) %>
+    6: <p><%= link_to "Create Personal Information Form", helpmate_newrec_path('hereid' => @user.id) %></p>
+    7: <% else %>
+    8: <p><%= link_to "Edit Personal Information Form", helpmate_edit_path('hereid' => @user.id) %></p>
+  
+app/views/helpmate/student.html.erb:5:in `_app_views_helpmate_student_html_erb__1810363327830392721_70187153507300'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (111.7ms)
+Started GET "/helpmate" for ::1 at 2017-03-23 15:29:53 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 202ms (Views: 198.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 15:29:59 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"Czar", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'Czar' and password = 'bragas') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/6
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 15:29:59 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.8ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (484.9ms)
+Completed 500 Internal Server Error in 503ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `helpmate_edit_path' for #<#<Class:0x007fab694be030>:0x007fab715efd20>
+Did you mean?  helpmate_register_path
+               helpmate_path
+               helpmate_getpform_path
+               helpmate_error_path
+               helpmate_newrec_path):
+     5: <% if (!@studentrec.pform.present?) %>
+     6: <p><%= link_to "Create Personal Information Form", helpmate_newrec_path('hereid' => @user.id) %></p>
+     7: <% else %>
+     8: <p><%= link_to "Edit Personal Information Form", helpmate_edit_path('hereid' => @user.id) %></p>
+     9: <% end %>
+    10: <p><%= link_to "View Personal Information Form", helpmate_pformshow_path('hereid' => @user.id) %></p>
+    11: <p><%= link_to "View List of Concerns", helpmate_concern_path('hereid' => @user.id)%></p>
+  
+app/views/helpmate/student.html.erb:8:in `_app_views_helpmate_student_html_erb__1810363327830392721_70187159151520'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.8ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.4ms)
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 15:30:59 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.7ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (675.2ms)
+Completed 500 Internal Server Error in 723ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `helpmate_pformshow_path' for #<#<Class:0x007fab6ab96758>:0x007fab6ab95330>
+Did you mean?  helpmate_getpform_path):
+     7: <% else %>
+     8: <p><%= link_to "Edit Personal Information Form", helpmate_edit_path('hereid' => @user.id) %></p>
+     9: <% end %>
+    10: <p><%= link_to "View Personal Information Form", helpmate_pformshow_path('hereid' => @user.id) %></p>
+    11: <p><%= link_to "View List of Concerns", helpmate_concern_path('hereid' => @user.id)%></p>
+    12: <p><%= link_to "Post a concern", helpmate_newconcern_path('hereid' => @user.id)%></p>
+    13: 
+  
+app/views/helpmate/student.html.erb:10:in `_app_views_helpmate_student_html_erb__1810363327830392721_70187103336440'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.5ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.5ms)
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 15:35:34 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (657.2ms)
+Completed 500 Internal Server Error in 668ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `helpmate_pformshow_path' for #<#<Class:0x007fab6ab96758>:0x007fab6ef6daf8>
+Did you mean?  helpmate_getpform_path):
+     7: <% else %>
+     8: <p><%= link_to "Edit Personal Information Form", helpmate_edit_path('hereid' => @user.id) %></p>
+     9: <% end %>
+    10: <p><%= link_to "View Personal Information Form", helpmate_pformshow_path('hereid' => @user.id) %></p>
+    11: <p><%= link_to "View List of Concerns", helpmate_concern_path('hereid' => @user.id)%></p>
+    12: <p><%= link_to "Post a concern", helpmate_newconcern_path('hereid' => @user.id)%></p>
+    13: 
+  
+app/views/helpmate/student.html.erb:10:in `_app_views_helpmate_student_html_erb__1810363327830392721_70187138904680'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.4ms)
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 15:36:20 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 193ms (Views: 186.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:36:22 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT "pforms".* FROM "pforms" WHERE (student_id = 1)[0m
+  Rendered helpmate/getpform.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `fname' for #<Pform::ActiveRecord_Relation:0x007fab730bdad0>):
+    1: 
+    2: <p>
+    3:   <strong>Fname:</strong>
+    4:   <%= @pform.fname %>
+    5: </p>
+    6: 
+    7: <p>
+  
+app/views/helpmate/getpform.html.erb:4:in `_app_views_helpmate_getpform_html_erb___2727397738836343643_70187173143100'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.5ms)
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:37:33 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.8ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 236ms (Views: 134.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:38:59 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 155ms (Views: 143.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:39:08 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 157ms (Views: 149.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 15:39:11 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 151ms (Views: 118.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:39:12 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 137ms (Views: 129.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:39:28 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.5ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 134ms (Views: 125.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:39:41 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 125ms (Views: 118.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:40:16 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 159ms (Views: 153.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/6" for ::1 at 2017-03-23 15:41:12 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/helpmate/6"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+Started GET "/helpmate/" for ::1 at 2017-03-23 15:41:13 +0800
+Processing by HelpmateController#index as HTML
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered collection of /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [129 times] (63.4ms)
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (7.2ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (264.1ms)
+Completed 200 OK in 634ms (Views: 628.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:41:16 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (1.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 129ms (Views: 118.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/helpmate/student/6" for ::1 at 2017-03-23 15:41:17 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 6) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 138ms (Views: 132.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:42:12 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 274ms (Views: 145.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:43:31 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 315ms (Views: 141.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:43:47 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 144ms (Views: 133.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/helpmate/getpform?hereid=6" for ::1 at 2017-03-23 15:44:22 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"6"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '6') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 1) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  Rendered helpmate/getpform.html.erb within layouts/application (362.5ms)
+Completed 500 Internal Server Error in 389ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `helpmate_student_path' for #<#<Class:0x007fab70dfe580>:0x007fab717ac230>
+Did you mean?  helpmate_edit_path
+               helpmate_path
+               helpmate_newrec_path
+               helpmate_register_path
+               helpmate_concern_path):
+    144:   <%= @pform.dateAcccom %>
+    145: </p>
+    146: 
+    147: <%= link_to 'Back to login page', helpmate_student_path(@user => @users.id)%>
+  
+app/views/helpmate/getpform.html.erb:147:in `_app_views_helpmate_getpform_html_erb___2727397738836343643_70187160004220'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.2ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.1ms)

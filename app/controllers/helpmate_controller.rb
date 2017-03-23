@@ -43,6 +43,16 @@ class HelpmateController < ApplicationController
 
 	def concern
 	end
+
+	def getpform
+
+		@student = Student.new
+		@student = Student.where("user_id = ?", params[:hereid]).first
+		@pform = Pform.where("student_id = ?", @student.id).first
+		@user = User.new
+		@users = User.find(params[:hereid])
+
+	end
 	def identify
 		@users = User.new
 		@users = User.where("username = ? and password = ?", params[:username], params[:password])
