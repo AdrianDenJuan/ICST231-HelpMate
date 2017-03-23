@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315134938) do
+ActiveRecord::Schema.define(version: 20170322201830) do
 
   create_table "children", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +27,25 @@ ActiveRecord::Schema.define(version: 20170315134938) do
     t.string   "contact_no"
     t.string   "email_add"
     t.integer  "pform_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "conversations", force: :cascade do |t|
+    t.text     "conv_topic"
+    t.datetime "post_date"
+    t.boolean  "conv_status"
+    t.integer  "student_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "councilors", force: :cascade do |t|
+    t.string   "fname"
+    t.string   "mi"
+    t.string   "lname"
+    t.string   "department"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -106,6 +125,14 @@ ActiveRecord::Schema.define(version: 20170315134938) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "replies", force: :cascade do |t|
+    t.text     "reply_message"
+    t.integer  "conv_id"
+    t.integer  "councilor_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "siblings", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
@@ -127,6 +154,23 @@ ActiveRecord::Schema.define(version: 20170315134938) do
     t.integer  "pform_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "fname"
+    t.string   "mi"
+    t.string   "lname"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "password"
+    t.string   "user_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

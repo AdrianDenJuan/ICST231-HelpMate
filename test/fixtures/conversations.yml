@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  conv_topic: MyText
+  post_date: 2017-03-23 04:17:54
+  conv_status: false
+  student_id: 1
+
+two:
+  conv_topic: MyText
+  post_date: 2017-03-23 04:17:54
+  conv_status: false
+  student_id: 1

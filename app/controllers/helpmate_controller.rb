@@ -1,11 +1,36 @@
 class HelpmateController < ApplicationController
 	def index
 		@pforms = Pform.all
+		@users = User.new
 	end
-	def login
+	def error
 
 	end
-	
+	def identify
+		@users = User.new
+		@users = User.where("username = ? and password = ?", params[:username], params[:password])
+		@users = @users.first
+		if(@users.present?)
+			if(@users.user_type == "student")
+				redirect_to "/helpmate/student/#{@users.id}"
+			elsif(@users.user_type == "staff")
+				redirect_to "/helpmate/staff/#{@users.id}"
+			end
+		else
+			redirect_to "/helpmate/error"
+		end
+
+	end
+
+	def student
+        @user = User.new
+        @user = User.find(params[:id])
+    end
+	def staff
+		@user = User.new
+		@user = User.find(params[:id])
+	end
+
 	def newrec
 		@pform = Pform.new
 		
@@ -23,6 +48,7 @@ class HelpmateController < ApplicationController
 		3.times do
 			@educ << EducInfo.new
 		end
+
 	end
 
 	def createrec

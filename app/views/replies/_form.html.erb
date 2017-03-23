@@ -1,0 +1,27 @@
+<%= form_for(reply) do |f| %>
+  <% if reply.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reply.errors.count, "error") %> prohibited this reply from being saved:</h2>
+
+      <ul>
+      <% reply.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :reply_message %>
+    <%= f.text_area :reply_message %>
+  </div>
+
+  <div class="field">
+    <%= f.label :conv_id %>
+    <%= f.number_field :conv_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

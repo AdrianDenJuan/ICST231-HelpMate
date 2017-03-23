@@ -1,0 +1,37 @@
+<%= form_for(councilor) do |f| %>
+  <% if councilor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(councilor.errors.count, "error") %> prohibited this councilor from being saved:</h2>
+
+      <ul>
+      <% councilor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fname %>
+    <%= f.text_field :fname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mi %>
+    <%= f.text_field :mi %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lname %>
+    <%= f.text_field :lname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :department %>
+    <%= f.text_field :department %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

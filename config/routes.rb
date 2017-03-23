@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
  post 'helpmate/newrec' => 'helpmate#createrec'
  get 'helpmate' => 'helpmate#index'
+ post 'helpmate' => 'helpmate#identify'
  get 'helpmate/newrec' => 'helpmate#newrec'
- get 'cafer/justfer/overadrian' => 'helpmate#newrec'
+ get 'helpmate/register' => 'users#new'
+ get '/helpmate/student/:id' => 'helpmate#student'
+ get '/helpmate/staff/:id' => 'helpmate#staff'
+ get '/helpmate/error' => 'helpmate#error'
+  resources :replies
+  resources :conversations
+  resources :users
+  resources :councilors
+  resources :students
   resources :contact_emergs
   resources :other_infos
   resources :parent_infos

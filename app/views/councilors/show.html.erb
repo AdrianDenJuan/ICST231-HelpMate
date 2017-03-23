@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @councilor.fname %>
+</p>
+
+<p>
+  <strong>Mi:</strong>
+  <%= @councilor.mi %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @councilor.lname %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @councilor.department %>
+</p>
+
+<%= link_to 'Edit', edit_councilor_path(@councilor) %> |
+<%= link_to 'Back', councilors_path %>
