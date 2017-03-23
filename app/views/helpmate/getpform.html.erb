@@ -1,6 +1,7 @@
 
 <h1> Hello, <%= @user.username %></h1>
-<p><a href = "/helpmate"> Log Out </a></p>
+<a href = "/helpmate"> Log Out </a><br>
+<a href = <%= "/helpmate/student/#{@user.id}" %> > Go back to user page </a> 
 <h1> Personal Information Form </h1>
 <p>
   <strong>First Name:</strong>
@@ -184,8 +185,98 @@
 </p>
 
 <% end %>
-<h1> Educational Background </h1>
 
+
+  <h1> Sibling Section </h1>
+      <% @pform.siblings.each do |s| %>
+        <p>
+        <strong>Name: </strong>
+          <%= s.name %>
+        </p>
+
+        <p>
+        <strong>Age: </strong>
+          <%= s.age %>
+        </p>
+
+        <p>
+        <strong>Civil Status</strong>
+        <%= s.civil_stat %>
+        </p>
+
+        <p>
+        <strong>School or Company</strong>
+        <%= s.schooloremp %>
+        </p>
+      
+        <p>
+          <strong>Year Level or Occupation</strong>
+          <%= s.yrlvloroccp %>
+        </p>
+    <% end %>
+
+<h1> Medical Information </h1>
+
+    <p>
+    <strong>Medical Conditions diagnosed since birth</strong>
+    <%= @pform.other_info.n_condition %>
+    </p>
+
+    <p>
+    <strong>Medical Conditions diagnosed in the last 3 years</strong>
+    <%= @pform.other_info.condition_temp %>
+   </p>
+
+<h1> Educational Background </h1>
+      <% @pform.educ_infos.each do |s| %>
+        <p>
+        <strong>Educational Level: </strong>
+         <h1> <%= s.educ_type %> </h1>
+        </p>
+
+        <p>
+        <strong>Year of Graduation: </strong>
+          <%= s.yr_grad %>
+        </p>
+
+        <p>
+        <strong>School Address</strong>
+        <%= s.school_addr %>
+        </p>
+
+        <p>
+        <strong>Recognition/Awards</strong>
+        <%= s.recogawards %>
+        </p>
+      
+    <% end %>
+
+<h1> Emergency Contact </h1>
+
+    <p>
+    <strong>Name</strong>
+    <%= @pform.contact_emerg.name %>
+    </p>
+
+    <p>
+    <strong>Relationship</strong>
+    <%= @pform.contact_emerg.relate %>
+   </p>
+
+    <p>
+    <strong>Contact Address</strong>
+    <%= @pform.contact_emerg.addr %>
+   </p>
+
+    <p>
+    <strong>Contact Number</strong>
+    <%= @pform.contact_emerg.contact_no %>
+   </p>
+
+    <p>
+    <strong>Contact Number</strong>
+    <%= @pform.contact_emerg.email_add %>
+   </p>
 <p>
   <strong>Current Work:</strong>
   <%= @pform.curr_work %>
@@ -215,4 +306,3 @@
   <strong>Date Accomplished:</strong>
   <%= @pform.dateAcccom %>
 </p>
-<a href = <%= "/helpmate/student/#{@user.id}" %> > Go back to user page </a> 

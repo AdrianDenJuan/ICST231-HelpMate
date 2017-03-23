@@ -28114,3 +28114,554 @@ Processing by HelpmateController#student as HTML
 Completed 200 OK in 145ms (Views: 141.0ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 18:36:17 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  Rendering helpmate/concern.html.erb within layouts/application
+  Rendered helpmate/concern.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @conversations.each do |conversation| %>
+    15:       <tr>
+    16:         <td><%= conversation.conv_topic %></td>
+    17:         <td><%= conversation.post_date %></td>
+  
+app/views/helpmate/concern.html.erb:14:in `_app_views_helpmate_concern_html_erb___3127755620594678638_70282554124840'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.0ms)
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 18:36:25 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  Rendering helpmate/concern.html.erb within layouts/application
+  Rendered helpmate/concern.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @conversations.each do |conversation| %>
+    15:       <tr>
+    16:         <td><%= conversation.conv_topic %></td>
+    17:         <td><%= conversation.post_date %></td>
+  
+app/views/helpmate/concern.html.erb:14:in `_app_views_helpmate_concern_html_erb___3127755620594678638_70282554145520'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.7ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (135.6ms)
+Started GET "/helpmate/concern?id=1" for ::1 at 2017-03-23 18:36:26 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"id"=>"1"}
+  Rendering helpmate/concern.html.erb within layouts/application
+  Rendered helpmate/concern.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @conversations.each do |conversation| %>
+    15:       <tr>
+    16:         <td><%= conversation.conv_topic %></td>
+    17:         <td><%= conversation.post_date %></td>
+  
+app/views/helpmate/concern.html.erb:14:in `_app_views_helpmate_concern_html_erb___3127755620594678638_70282567129960'
+Started GET "/helpmate/" for ::1 at 2017-03-23 18:36:26 +0800
+Processing by HelpmateController#index as HTML
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.5ms)
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (40.1ms)
+Started GET "/helpmate/" for ::1 at 2017-03-23 18:36:27 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 596ms (Views: 591.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1603ms (Views: 1191.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-23 18:36:43 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (11.0ms)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-03-23 18:36:45 +0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 234ms (Views: 229.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2017-03-23 18:36:47 +0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 223ms (Views: 218.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 18:36:55 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/error
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/helpmate/error" for ::1 at 2017-03-23 18:36:55 +0800
+Processing by HelpmateController#error as HTML
+  Rendering helpmate/error.html.erb within layouts/application
+  Rendered helpmate/error.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 193ms (Views: 190.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 18:36:58 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 109ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 18:37:04 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'Justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/9
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 18:37:04 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.7ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 224ms (Views: 200.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/helpmate/newrec?hereid=9" for ::1 at 2017-03-23 18:37:07 +0800
+Processing by HelpmateController#newrec as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/newrec.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered helpmate/newrec.html.erb within layouts/application (94.7ms)
+Completed 200 OK in 371ms (Views: 233.7ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/helpmate/newrec" for ::1 at 2017-03-23 19:32:29 +0800
+Processing by HelpmateController#createrec as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "pform"=>{"fname"=>"Justfer", "mi"=>"A.", "lname"=>"Fernandez", "coursemajor"=>"BSIT", "year_level"=>"3", "perm_address"=>"Matungao Iraya, Brgy. Tugbo Masbate City", "pres_address"=>"Lot 15, Block 7 Parkview Executive Townhouse", "contact_no"=>"09186463531", "email"=>"justferfernandez@gmail.com", "birth_date"=>"08-05-1997", "age"=>"19", "sex"=>"Male", "p_of_birth"=>"MANILA", "nationality"=>"Filipino", "civil_stat"=>"Single ", "admis_type"=>"New Enrolee", "emp_name"=>"", "emp_addr"=>"", "emp_cont_no"=>"", "yr_w_emp"=>"", "faveplace"=>"", "curr_work"=>"None", "posHeld"=>"None", "reason4AdNU"=>"Quality Education ", "whoDecide"=>"My Mom and I", "hobbies"=>"Reading", "dateAcccom"=>"March 23, 2017"}, "names"=>["Feliciano F. Fernandez", "Ma. Jona A. Fernandez "], "relates"=>["Father", "Mother"], "bdates"=>["06-09-1946", "08-22-1967"], "ages"=>["70", "49"], "religions"=>["Catholic", "Catholic"], "nationalities"=>["Filipino", "Filipino"], "present_adds"=>["Lot 15, Block 7 Parkview Executive Townhomes", "Lot 15, Block 7 Parkview Executive Townhomes"], "contact_nos"=>["(056)333-4222", "09217986762"], "educ_attains"=>["College Graduate", "College Garduate"], "occps"=>["Teacher", "Registered Nurse"], "emp_names"=>["Osmeña Colleges", ""], "emp_addrs"=>["Osmeña Colleges, Masbate City", ""], "freqInteracts0"=>"Sometimes", "civil_stats"=>["Married", "Married"], "freqInteracts1"=>"Always", "namesib"=>["Julleos", "Jancesca", "Jakobb", "Joanafer Lee"], "agesib"=>["19", "16", "10", "23"], "civil_statsib"=>["Single", "Single", "Single", "Single"], "schoolorempsib"=>["Ateneo De Naga University", "MICSI", "MICSI", ""], "yrlvloroccpsib"=>["Graduate", "9", "4", ""], "condition"=>"None", "con"=>"None", "name"=>"Julleos A. Fernandez", "relate"=>"Brother", "addr"=>"Lot 15, Block 7 Parkview Executive Townhomes", "contact_no"=>"09489684848", "email_add"=>"julleos@gmail.com", "yr_grads"=>["2010", "2014", ""], "school_addrs"=>["Liceo De Masbate", "Liceo De Masbate", ""], "recogawardS"=>["Salutatorian", "Salutatorian", ""], "stu_id"=>"4", "usr_id"=>"9", "commit"=>"Create Personal Information Form"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "pforms" ("fname", "mi", "lname", "coursemajor", "student_id", "year_level", "perm_address", "pres_address", "contact_no", "email", "birth_date", "age", "sex", "p_of_birth", "nationality", "civil_stat", "admis_type", "emp_name", "emp_addr", "emp_cont_no", "faveplace", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Justfer"], ["mi", "A."], ["lname", "Fernandez"], ["coursemajor", "BSIT"], ["student_id", 4], ["year_level", "3"], ["perm_address", "Matungao Iraya, Brgy. Tugbo Masbate City"], ["pres_address", "Lot 15, Block 7 Parkview Executive Townhouse"], ["contact_no", "09186463531"], ["email", "justferfernandez@gmail.com"], ["birth_date", Thu, 08 May 1997], ["age", 19], ["sex", "Male"], ["p_of_birth", "MANILA"], ["nationality", "Filipino"], ["civil_stat", "Single "], ["admis_type", "New Enrolee"], ["emp_name", ""], ["emp_addr", ""], ["emp_cont_no", ""], ["faveplace", ""], ["created_at", 2017-03-23 11:32:29 UTC], ["updated_at", 2017-03-23 11:32:29 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "contact_emergs" ("name", "relate", "addr", "contact_no", "email_add", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Julleos A. Fernandez"], ["relate", "Brother"], ["addr", "Lot 15, Block 7 Parkview Executive Townhomes"], ["contact_no", "09489684848"], ["email_add", "julleos@gmail.com"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "other_infos" ("n_condition", "condition_temp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n_condition", "None"], ["condition_temp", "None"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "educ_infos" ("yr_grad", "school_addr", "recogawards", "educ_type", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["yr_grad", 2010], ["school_addr", "Liceo De Masbate"], ["recogawards", "Salutatorian"], ["educ_type", "Elementary"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "educ_infos" ("yr_grad", "school_addr", "recogawards", "educ_type", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["yr_grad", 2014], ["school_addr", "Liceo De Masbate"], ["recogawards", "Salutatorian"], ["educ_type", "Secondary"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.1ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "educ_infos" ("school_addr", "recogawards", "educ_type", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["school_addr", ""], ["recogawards", ""], ["educ_type", "Senior High School"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "parent_infos" ("name", "relate", "birth_date", "age", "religion", "nationality", "present_add", "educ_attain", "occp", "emp_name", "emp_addr", "freqInteract", "civil_stat", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Feliciano F. Fernandez"], ["relate", "Father"], ["birth_date", Fri, 06 Sep 1946], ["age", 70], ["religion", "Catholic"], ["nationality", "Filipino"], ["present_add", "Lot 15, Block 7 Parkview Executive Townhomes"], ["educ_attain", "(056)333-4222"], ["occp", "Teacher"], ["emp_name", "Osmeña Colleges"], ["emp_addr", "Osmeña Colleges, Masbate City"], ["freqInteract", "Sometimes"], ["civil_stat", "Married"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "parent_infos" ("name", "relate", "age", "religion", "nationality", "present_add", "educ_attain", "occp", "emp_name", "emp_addr", "freqInteract", "civil_stat", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ma. Jona A. Fernandez "], ["relate", "Mother"], ["age", 49], ["religion", "Catholic"], ["nationality", "Filipino"], ["present_add", "Lot 15, Block 7 Parkview Executive Townhomes"], ["educ_attain", "09217986762"], ["occp", "Registered Nurse"], ["emp_name", ""], ["emp_addr", ""], ["freqInteract", "Always"], ["civil_stat", "Married"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "age", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Julleos"], ["age", 19], ["civil_stat", "Single"], ["schooloremp", "Ateneo De Naga University"], ["yrlvloroccp", "Graduate"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "age", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jancesca"], ["age", 16], ["civil_stat", "Single"], ["schooloremp", "MICSI"], ["yrlvloroccp", "9"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "age", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jakobb"], ["age", 10], ["civil_stat", "Single"], ["schooloremp", "MICSI"], ["yrlvloroccp", "4"], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "siblings" ("name", "age", "civil_stat", "schooloremp", "yrlvloroccp", "pform_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joanafer Lee"], ["age", 23], ["civil_stat", "Single"], ["schooloremp", ""], ["yrlvloroccp", ""], ["pform_id", 56], ["created_at", 2017-03-23 11:32:30 UTC], ["updated_at", 2017-03-23 11:32:30 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/helpmate/student/9
+Completed 302 Found in 288ms (ActiveRecord: 29.8ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 19:32:30 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.5ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 285ms (Views: 275.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:32:32 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.4ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.2ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  Rendered helpmate/getpform.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 165ms (Views: 154.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:32:57 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.3ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.3ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  Rendered helpmate/getpform.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 194ms (Views: 178.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:35:27 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.4ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.3ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  Rendered helpmate/getpform.html.erb within layouts/application (72.7ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `other_infos' for #<Pform:0x007fd7dc972370>
+Did you mean?  other_info
+               other_info=):
+    214:     <% end %>
+    215: 
+    216: <h1> Medical Information </h1>
+    217:   <% @pform.other_infos.each do |s| %>
+    218:     <p>
+    219:     <strong>Medical Conditions diagnosed since birth</strong>
+    220:     <%= s.n_condition %>
+  
+app/views/helpmate/getpform.html.erb:217:in `_app_views_helpmate_getpform_html_erb__868130593270276629_70282547779780'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (128.7ms)
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:35:37 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.2ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.2ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.3ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (33.9ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<OtherInfo:0x007fd7e16931e0>):
+    214:     <% end %>
+    215: 
+    216: <h1> Medical Information </h1>
+    217:   <% @pform.other_info.each do |s| %>
+    218:     <p>
+    219:     <strong>Medical Conditions diagnosed since birth</strong>
+    220:     <%= s.n_condition %>
+  
+app/views/helpmate/getpform.html.erb:217:in `_app_views_helpmate_getpform_html_erb__868130593270276629_70282588327180'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.5ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (120.3ms)
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:35:50 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.2ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.3ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.3ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 221ms (Views: 209.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:36:22 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (1.5ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.3ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (2.0ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (1.4ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 309ms (Views: 295.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:40:28 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (1.7ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.3ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.2ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.2ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.2ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  Rendered helpmate/getpform.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 291ms (Views: 277.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 19:40:57 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 150ms (Views: 144.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 19:44:16 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'Justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/9
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 19:44:16 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 158ms (Views: 153.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:44:19 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.2ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.2ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.2ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.2ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 164ms (Views: 155.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 19:44:48 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 165ms (Views: 158.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 19:45:12 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 156ms (Views: 150.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:45:14 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.3ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.3ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.3ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.3ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 148ms (Views: 129.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 19:45:31 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 159ms (Views: 152.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 19:45:47 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 153ms (Views: 147.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:45:48 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.3ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.2ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.2ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.2ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 132ms (Views: 121.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:46:03 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.6ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.2ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.4ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.3ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.2ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 180ms (Views: 168.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:46:09 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.3ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.2ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.2ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.3ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 123ms (Views: 111.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 19:46:14 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 130ms (Views: 122.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 19:46:21 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.3ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.3ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.4ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.4ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 143ms (Views: 130.6ms | ActiveRecord: 2.4ms)
+
+

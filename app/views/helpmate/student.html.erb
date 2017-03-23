@@ -4,8 +4,6 @@
 <% @studentrec = Student.where("user_id = ?", @user.id).first %>
 <% if (!@studentrec.pform.present?) %>
 <p><%= link_to "Create Personal Information Form", helpmate_newrec_path('hereid' => @user.id) %></p>
-<% else %>
-<p><%= link_to "Edit Personal Information Form", helpmate_edit_path('hereid' => @user.id) %></p>
 <% end %>
 <% if(@studentrec.pform.present?) %>
 <p><%= link_to "View Personal Information Form", helpmate_getpform_path('hereid' => @user.id) %></p>
