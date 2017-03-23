@@ -1,8 +1,25 @@
+<div class="bodyc">
 
+<div class="rowheader">
+				<div class="col-10">
+					<span id="cgc">The College Guidance Center</span>
+				</div>
+			</div>	
+			<div class="row body">
+				<div class="sidebar col-2">
+					<p><a href="#">HOME</a></p>
+					<p><a href="#">MY PROFILE</a></p>
+					<p><a href="#">MY CONCERNS</a></span>
+					<p><a href="#">ABOUT US</a></p>
+					<p><a href="#">CONTACT US</a></p>
+				</div>
+			</div>
+			<br>
 <h1> Hello, <%= @user.username %></h1>
 <a href = "/helpmate"> Log Out </a><br>
 <a href = <%= "/helpmate/student/#{@user.id}" %> > Go back to user page </a> 
 <h1> Personal Information Form </h1>
+
 <p>
   <strong>First Name:</strong>
   <%= @pform.fname %>
@@ -306,3 +323,5 @@
   <strong>Date Accomplished:</strong>
   <%= @pform.dateAcccom %>
 </p>
+
+</div>

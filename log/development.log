@@ -30712,3 +30712,146 @@ Processing by HelpmateController#index as HTML
 Completed 200 OK in 127ms (Views: 124.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/helpmate" for ::1 at 2017-03-23 23:28:04 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (20287.3ms)
+Completed 200 OK in 20687ms (Views: 20627.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/register" for ::1 at 2017-03-23 23:29:00 +0800
+Processing by HelpmateController#register as HTML
+  Rendering helpmate/register.html.erb within layouts/application
+  Rendered helpmate/register.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 357ms (Views: 247.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/helpmate/register" for ::1 at 2017-03-23 23:29:13 +0800
+Processing by HelpmateController#createuser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"cafer", "password"=>"[FILTERED]", "user_type"=>"student"}, "fname"=>"Carl", "mi"=>"U", "lname"=>"Sabater", "department"=>"", "commit"=>"Sign Up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (14.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "user_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "cafer"], ["password", "cafer"], ["user_type", "student"], ["created_at", 2017-03-23 15:29:13 UTC], ["updated_at", 2017-03-23 15:29:13 UTC]]
+  [1m[35m (83.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "students" ("fname", "mi", "lname", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["fname", "Carl"], ["mi", "U"], ["lname", "Sabater"], ["user_id", 12], ["created_at", 2017-03-23 15:29:14 UTC], ["updated_at", 2017-03-23 15:29:14 UTC]]
+  [1m[35m (68.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/helpmate
+Completed 302 Found in 654ms (ActiveRecord: 167.4ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 23:29:14 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 166ms (Views: 150.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 23:29:18 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"cafer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'cafer' and password = 'cafer') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/12
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/student/12" for ::1 at 2017-03-23 23:29:18 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 12) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.5ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 6], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 226ms (Views: 206.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/helpmate/newrec?hereid=12" for ::1 at 2017-03-23 23:29:23 +0800
+Processing by HelpmateController#newrec as HTML
+  Parameters: {"hereid"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering helpmate/newrec.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 12) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered helpmate/newrec.html.erb within layouts/application (107.2ms)
+Completed 200 OK in 353ms (Views: 270.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 23:29:29 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 594ms (Views: 574.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 23:29:44 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 559ms (Views: 544.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 23:29:50 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/error
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/error" for ::1 at 2017-03-23 23:29:50 +0800
+Processing by HelpmateController#error as HTML
+  Rendering helpmate/error.html.erb within layouts/application
+  Rendered helpmate/error.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 162ms (Views: 149.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 23:29:53 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 213ms (Views: 198.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 23:30:22 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 563ms (Views: 546.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 23:30:30 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'Justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/9
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 23:30:30 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.5ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (87.2ms)
+Completed 200 OK in 547ms (Views: 528.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-23 23:30:35 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.5ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.0ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.0ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.0ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.5ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.0ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (100.8ms)
+Completed 200 OK in 341ms (Views: 314.7ms | ActiveRecord: 4.0ms)
+
+
