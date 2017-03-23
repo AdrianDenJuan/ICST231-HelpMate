@@ -6,6 +6,8 @@
 3. Czar Ramon Bragas
 4. Justfer Fernandez
 
+### ACTIVITY
+1. Create CSS for student dashboard, student log in, student create personal form and student display personal form 
 ### MAJOR REVISION:
 
 1. moved initial uploads of CSS, HTML and etc to an old folder.

@@ -7,8 +7,8 @@
 <% else %>
 <p><%= link_to "Edit Personal Information Form", helpmate_edit_path('hereid' => @user.id) %></p>
 <% end %>
+<% if(@studentrec.pform.present?) %>
 <p><%= link_to "View Personal Information Form", helpmate_getpform_path('hereid' => @user.id) %></p>
+<% end %>
 <p><%= link_to "View List of Concerns", helpmate_concern_path('hereid' => @user.id)%></p>
 <p><%= link_to "Post a concern", helpmate_newconcern_path('hereid' => @user.id)%></p>
-
-<%= link_to 'Back to login page', helpmate_path %> 

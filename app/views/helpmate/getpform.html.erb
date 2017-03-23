@@ -1,51 +1,45 @@
 
+<h1> Hello, <%= @user.username %></h1>
+<p><a href = "/helpmate"> Log Out </a></p>
+<h1> Personal Information Form </h1>
 <p>
-  <strong>Fname:</strong>
+  <strong>First Name:</strong>
   <%= @pform.fname %>
 </p>
 
 <p>
-  <strong>Mi:</strong>
+  <strong>Middle Initial:</strong>
   <%= @pform.mi %>
 </p>
 
 <p>
-  <strong>Lname:</strong>
+  <strong>Last Name:</strong>
   <%= @pform.lname %>
 </p>
 
 <p>
-  <strong>Coursemajor:</strong>
+  <strong>Course and Major:</strong>
   <%= @pform.coursemajor %>
 </p>
 
-<p>
-  <strong>Student:</strong>
-  <%= @pform.student_id %>
-</p>
 
 <p>
-  <strong>Year level:</strong>
+  <strong>Year Level:</strong>
   <%= @pform.year_level %>
 </p>
 
 <p>
-  <strong>Photoloc:</strong>
-  <%= @pform.photoloc %>
-</p>
-
-<p>
-  <strong>Perm address:</strong>
+  <strong>Permanent Address:</strong>
   <%= @pform.perm_address %>
 </p>
 
 <p>
-  <strong>Pres address:</strong>
+  <strong>Present Address:</strong>
   <%= @pform.pres_address %>
 </p>
 
 <p>
-  <strong>Contact no:</strong>
+  <strong>Contact Number:</strong>
   <%= @pform.contact_no %>
 </p>
 
@@ -54,8 +48,10 @@
   <%= @pform.email %>
 </p>
 
+
+
 <p>
-  <strong>Birth date:</strong>
+  <strong>Birth Date:</strong>
   <%= @pform.birth_date %>
 </p>
 
@@ -70,7 +66,7 @@
 </p>
 
 <p>
-  <strong>P of birth:</strong>
+  <strong>Place of Birth:</strong>
   <%= @pform.p_of_birth %>
 </p>
 
@@ -80,57 +76,133 @@
 </p>
 
 <p>
-  <strong>Civil stat:</strong>
+  <strong>Civil Status:</strong>
   <%= @pform.civil_stat %>
 </p>
 
 <p>
-  <strong>Admis type:</strong>
+  <strong>Admission Type:</strong>
   <%= @pform.admis_type %>
 </p>
 
+<p> NOTE: if employed </p>
 <p>
-  <strong>Emp name:</strong>
+  <strong>Employer's name:</strong>
   <%= @pform.emp_name %>
 </p>
 
 <p>
-  <strong>Emp addr:</strong>
+  <strong>Employer's Address:</strong>
   <%= @pform.emp_addr %>
 </p>
 
 <p>
-  <strong>Emp cont no:</strong>
+  <strong>Employer's contact number:</strong>
   <%= @pform.emp_cont_no %>
 </p>
 
 <p>
-  <strong>Yr w emp:</strong>
+  <strong>Years with employer:</strong>
   <%= @pform.yr_w_emp %>
 </p>
 
 <p>
-  <strong>Faveplace:</strong>
+  <strong>Favorite Place:</strong>
   <%= @pform.faveplace %>
 </p>
 
+<h1> Parent Information </h1>
+<% @pform.parent_infos.each do |p| %>
 <p>
-  <strong>Curr work:</strong>
+  <strong>Name:</strong>
+  <%= p.name %>
+</p>
+
+<p>
+  <strong>Relate:</strong>
+  <%= p.relate %>
+</p>
+
+<p>
+  <strong>Birth date:</strong>
+  <%= p.birth_date %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= p.age %>
+</p>
+
+<p>
+  <strong>Religion:</strong>
+  <%= p.religion %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= p.nationality %>
+</p>
+
+<p>
+  <strong>Present add:</strong>
+  <%= p.present_add %>
+</p>
+
+<p>
+  <strong>Contact no:</strong>
+  <%= p.contact_no %>
+</p>
+
+<p>
+  <strong>Educ attain:</strong>
+  <%= p.educ_attain %>
+</p>
+
+<p>
+  <strong>Occp:</strong>
+  <%= p.occp %>
+</p>
+
+<p>
+  <strong>Emp name:</strong>
+  <%= p.emp_name %>
+</p>
+
+<p>
+  <strong>Emp addr:</strong>
+  <%= p.emp_addr %>
+</p>
+
+<p>
+  <strong>Freqinteract:</strong>
+  <%= p.freqInteract %>
+</p>
+
+<p>
+  <strong>Civil stat:</strong>
+  <%= p.civil_stat %>
+</p>
+
+<% end %>
+<h1> Educational Background </h1>
+
+<p>
+  <strong>Current Work:</strong>
   <%= @pform.curr_work %>
 </p>
 
 <p>
-  <strong>Posheld:</strong>
+  <strong>Position Held:</strong>
   <%= @pform.posHeld %>
 </p>
 
 <p>
-  <strong>Reason4adnu:</strong>
+  <strong>Reason for choosing AdNU:</strong>
   <%= @pform.reason4AdNU %>
 </p>
 
 <p>
-  <strong>Whodecide:</strong>
+  <strong>Who decided?:</strong>
   <%= @pform.whoDecide %>
 </p>
 
@@ -140,8 +212,7 @@
 </p>
 
 <p>
-  <strong>Dateacccom:</strong>
+  <strong>Date Accomplished:</strong>
   <%= @pform.dateAcccom %>
 </p>
-
-<%= link_to 'Back to login page', helpmate_student_path(@user => @users.id)%>
+<a href = <%= "/helpmate/student/#{@user.id}" %> > Go back to user page </a> 

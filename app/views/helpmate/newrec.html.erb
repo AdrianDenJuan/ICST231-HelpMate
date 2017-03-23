@@ -1,5 +1,6 @@
 
 <h1> Hello, <%= @user.username %> </h1>
+<p><a href = "/helpmate"> Log Out </a></p>
 <h1> Personal Information Form </h1>
 <%= form_for(@pform, :url => helpmate_newrec_path, :html => {:method => "post"}) do |f| %>
 
@@ -282,10 +283,9 @@
     </div>
 
 
-  <% end %>
-
-
-  <h1> Educational Background </h1>
+  <% end %> 
+ 
+   <h1> Educational Background </h1>
    <% ei = 0 %>
     <% 3.times do %>
       <%= f.fields_for @educ[ei] do |e| %>
@@ -315,7 +315,7 @@
       <% end %>
         <% ei = ei + 1 %>
     <% end %>
-    
+       
   <div class="field">
     <%= f.label "Current Work" %>
     <%= f.text_field :curr_work %>
