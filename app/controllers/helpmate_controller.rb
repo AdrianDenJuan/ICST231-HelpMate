@@ -5,7 +5,20 @@ class HelpmateController < ApplicationController
 	def error
 
 	end
-
+	def newconcern
+		@user = User.find(params[:hereid])
+		@concern = Conversation.new
+	end
+	def createconcern
+		@user = User.find(params[:hereid])
+		@concern = Conversation.new
+		@students = Student.where("user_id = ?", @user.id).first
+		@concern.conv_topic = params[:concern_topic]
+		@concern.post_date = params[:datepost]
+		@concern.student_id = @students.id
+		@concern.save
+		redirect_to "/helpmate/concern?hereid=#{@user.id}"
+	end
 	def register
 		@users = User.new
 		@students = Student.new
@@ -42,6 +55,8 @@ class HelpmateController < ApplicationController
 	end
 
 	def concern
+		@user = User.find(params[:hereid])
+		@conversations = Conversation.where("id = ? ", @user.id)
 	end
 
 	def getpform

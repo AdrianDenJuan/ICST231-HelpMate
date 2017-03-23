@@ -1,24 +1,23 @@
-<h1>List of Concerns</h1>
+<h1>List of Concerns posted by <%= @user.username %> </h1>
+
+<a href = <%= "/helpmate/student/#{@user.id}" %> > Go back to user page </a> 
 
 <table>
   <thead>
     <tr>
       <th>Conv topic</th>
       <th>Post date</th>
-      <th>Conv status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
+
   <tbody>
-    <% @conversations.each do |conversation| %>
+  <% @student = Student.where("user_id = ?", params[:hereid]).first %>
+    <% @student.conversations.each do |conversation| %>
       <tr>
         <td><%= conversation.conv_topic %></td>
         <td><%= conversation.post_date %></td>
-        <td><%= conversation.conv_status %></td>
-        <td><%= link_to 'Show', conversation %></td>
-        <td><%= link_to 'Edit', edit_conversation_path(conversation) %></td>
-        <td><%= link_to 'Destroy', conversation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Conversation', new_conversation_path %>
+<%= link_to 'New Concern', helpmate_newconcern_path('hereid' => @user.id) %>

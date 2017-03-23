@@ -7,7 +7,8 @@
 4. Justfer Fernandez
 
 ### ACTIVITY
-1. Create CSS for student dashboard, student log in, student create personal form and student display personal form 
+1. Create CSS for student dashboard, student log in, student create personal form and student display personal form
+2. Create CSS for student list of concern and new concern 
 ### MAJOR REVISION:
 
 1. moved initial uploads of CSS, HTML and etc to an old folder.
