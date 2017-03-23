@@ -5,6 +5,13 @@ class HelpmateController < ApplicationController
 	def error
 
 	end
+	def showconcern
+		@user = User.find(params[:hereid])
+		@student = Student.find(params[:stuid])
+		@concern = Conversation.find(params[:convid])
+
+		
+	end
 	def newconcern
 		@user = User.find(params[:hereid])
 		@concern = Conversation.new

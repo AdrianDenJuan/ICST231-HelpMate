@@ -1,0 +1,14 @@
+
+<h1> Hello, <%= @user.username %> </h1>
+<p><a href = "/helpmate"> Log Out </a></p>
+<a href = <%= "/helpmate/student/#{@user.id}" %> > Go back to user page </a> <br>
+<a href = <%= "/helpmate/concern?hereid=#{@user.id}" %> > Go back to list of concern </a>
+<h1> <%= @concern.conv_topic %> </h1>
+
+<h1> Staff Replies </h1>
+<% @concern.replies.each do |c| %>
+	<p>
+	<strong><%= Councilor.where("councilor_id = ? ", c.councilor_id).first %></strong>
+	<%= c.reply_message %>
+	 </p>
+	<% end %>

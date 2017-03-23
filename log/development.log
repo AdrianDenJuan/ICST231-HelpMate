@@ -29639,3 +29639,678 @@ Processing by HelpmateController#index as HTML
 Completed 200 OK in 126ms (Views: 114.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 21:25:34 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.7ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (154.4ms)
+Completed 200 OK in 881ms (Views: 819.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 21:25:38 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 253ms (Views: 244.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 21:46:53 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'Justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/9
+Completed 302 Found in 37ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 21:46:53 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.9ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 277ms (Views: 265.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/helpmate/newconcern?hereid=9" for ::1 at 2017-03-23 21:46:57 +0800
+Processing by HelpmateController#newconcern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/newconcern.html.erb within layouts/application
+  Rendered helpmate/newconcern.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 337ms (Views: 277.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:47:01 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.8ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 282ms (Views: 274.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:52:51 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (1.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE (id = 9 )[0m
+  Rendered helpmate/concern.html.erb within layouts/application (429.7ms)
+Completed 500 Internal Server Error in 455ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `helpmate_showconcern_path' for #<#<Class:0x007fe13ec98430>:0x007fe14156fc00>
+Did you mean?  helpmate_newconcern_path
+               helpmate_concern_path
+               helpmate_concern_url
+               helpmate_newrec_path
+               helpmate_edit_path
+               helpmate_error_path
+               helpmate_register_path
+               helpmate_newconcern_url):
+    18:       <tr>
+    19:         <td><%= conversation.conv_topic %></td>
+    20:         <td><%= conversation.post_date %></td>
+    21:         <td><%= link_to 'Show Concern', helpmate_showconcern_path('hereid' => @user.id, 'stuid' => @student.id, 'convid' => conversation.id) %></td>
+    22:       </tr>
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/helpmate/concern.html.erb:21:in `block in _app_views_helpmate_concern_html_erb___4293391682221784495_70302724014920'
+app/views/helpmate/concern.html.erb:17:in `_app_views_helpmate_concern_html_erb___4293391682221784495_70302724014920'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.6ms)
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:57:01 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 292ms (Views: 244.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/helpmate/showconcern?convid=4&hereid=9&stuid=4" for ::1 at 2017-03-23 21:57:03 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"4", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `conv_topic' for nil:NilClass):
+    1: <h1> <%= @conversation.conv_topic %> </h1>
+  
+app/views/helpmate/showconcern.html.erb:1:in `_app_views_helpmate_showconcern_html_erb___3021087867835421444_70302723934380'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.5ms)
+Started GET "/helpmate/showconcern?convid=4&hereid=9&stuid=4" for ::1 at 2017-03-23 21:57:12 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"4", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 163ms (Views: 156.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:57:25 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 127ms (Views: 122.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/showconcern?convid=3&hereid=9&stuid=4" for ::1 at 2017-03-23 21:57:28 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"3", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 127ms (Views: 118.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/showconcern?convid=4&hereid=9&stuid=4" for ::1 at 2017-03-23 21:57:32 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"4", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 124ms (Views: 117.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 21:57:34 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 148ms (Views: 136.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:58:32 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 158ms (Views: 152.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:58:34 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 147ms (Views: 139.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:59:03 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 155ms (Views: 150.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 21:59:06 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.6ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (132.8ms)
+Completed 200 OK in 252ms (Views: 243.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 21:59:07 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 130ms (Views: 124.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 21:59:09 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 137ms (Views: 124.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/helpmate/showconcern?convid=3&hereid=9&stuid=4" for ::1 at 2017-03-23 21:59:13 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"3", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 160ms (Views: 152.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:00:35 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 174ms (Views: 166.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 22:00:36 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 103.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 22:00:44 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 119ms (Views: 112.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:00:45 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 170ms (Views: 163.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 22:00:47 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 143ms (Views: 135.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:00:48 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 143ms (Views: 136.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/helpmate/showconcern?convid=3&hereid=9&stuid=4" for ::1 at 2017-03-23 22:00:50 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"3", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 132ms (Views: 126.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:00:51 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 166ms (Views: 159.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/helpmate/showconcern?convid=4&hereid=9&stuid=4" for ::1 at 2017-03-23 22:00:52 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"4", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 124ms (Views: 116.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:00:53 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 139ms (Views: 133.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 22:00:54 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 179ms (Views: 164.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:00:57 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 147ms (Views: 137.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/showconcern?convid=3&hereid=9&stuid=4" for ::1 at 2017-03-23 22:00:59 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"3", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 202ms (Views: 194.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:01:00 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (2.0ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 270ms (Views: 261.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/helpmate/showconcern?convid=4&hereid=9&stuid=4" for ::1 at 2017-03-23 22:01:02 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"4", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 201ms (Views: 193.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:01:03 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 152ms (Views: 147.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 22:01:04 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 124ms (Views: 115.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:01:06 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 141ms (Views: 136.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 22:01:11 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 148ms (Views: 142.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/helpmate/newconcern?hereid=9" for ::1 at 2017-03-23 22:01:12 +0800
+Processing by HelpmateController#newconcern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/newconcern.html.erb within layouts/application
+  Rendered helpmate/newconcern.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 179ms (Views: 175.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/helpmate/newconcern" for ::1 at 2017-03-23 22:01:25 +0800
+Processing by HelpmateController#createconcern as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "concern_topic"=>"Something", "datepost"=>"", "hereid"=>"9", "commit"=>"Create Conversation"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (8.8ms)[0m  [1m[32mINSERT INTO "conversations" ("conv_topic", "student_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["conv_topic", "Something"], ["student_id", 4], ["created_at", 2017-03-23 14:01:25 UTC], ["updated_at", 2017-03-23 14:01:25 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/helpmate/concern?hereid=9
+Completed 302 Found in 27ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:01:25 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 132ms (Views: 126.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/helpmate/showconcern?convid=5&hereid=9&stuid=4" for ::1 at 2017-03-23 22:01:27 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"5", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 175ms (Views: 163.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-23 22:01:28 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 140ms (Views: 135.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddConversationidToReplies (20170323140416)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "replies" ADD "conversation_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170323140416"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 22:07:56 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  Rendered helpmate/showconcern.html.erb within layouts/application (31.8ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `replies' for #<Conversation:0x007fbe49f53cc8>):
+     6: <h1> <%= @concern.conv_topic %> </h1>
+     7: 
+     8: <h1> Staff Replies </h1>
+     9: <% @concern.replies.each do |c| %>
+    10: 	<p>
+    11: 	<strong><%= Councilor.where("councilor_id = ? ", c.councilor_id).first %></strong>
+    12: 	 </p>
+  
+app/views/helpmate/showconcern.html.erb:9:in `_app_views_helpmate_showconcern_html_erb___90424690306254150_70227630657140'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (138.5ms)
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 22:09:49 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  [1m[36mReply Load (0.5ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."conversation_id" = ?[0m  [["conversation_id", 2]]
+  Rendered helpmate/showconcern.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 884ms (Views: 810.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/helpmate/showconcern?convid=2&hereid=9&stuid=4" for ::1 at 2017-03-23 22:13:37 +0800
+Processing by HelpmateController#showconcern as HTML
+  Parameters: {"convid"=>"2", "hereid"=>"9", "stuid"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering helpmate/showconcern.html.erb within layouts/application
+  [1m[36mReply Load (0.8ms)[0m  [1m[34mSELECT "replies".* FROM "replies" WHERE "replies"."conversation_id" = ?[0m  [["conversation_id", 2]]
+  Rendered helpmate/showconcern.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 359ms (Views: 237.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-23 22:13:55 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.9ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (109.3ms)
+Completed 200 OK in 254ms (Views: 245.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 22:13:57 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 172ms (Views: 168.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/helpmate/register" for ::1 at 2017-03-23 22:13:59 +0800
+Processing by HelpmateController#register as HTML
+  Rendering helpmate/register.html.erb within layouts/application
+  Rendered helpmate/register.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 209ms (Views: 171.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/helpmate/register" for ::1 at 2017-03-23 22:14:17 +0800
+Processing by HelpmateController#createuser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"heli", "password"=>"[FILTERED]", "user_type"=>"staff"}, "fname"=>"Helimar", "mi"=>"", "lname"=>"Rabago", "department"=>"DCS", "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "user_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "heli"], ["password", "12345"], ["user_type", "staff"], ["created_at", 2017-03-23 14:14:17 UTC], ["updated_at", 2017-03-23 14:14:17 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "councilors" ("fname", "mi", "lname", "department", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Helimar"], ["mi", ""], ["lname", "Rabago"], ["department", "DCS"], ["user_id", 10], ["created_at", 2017-03-23 14:14:17 UTC], ["updated_at", 2017-03-23 14:14:17 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/helpmate
+Completed 302 Found in 29ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-23 22:14:17 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 152ms (Views: 149.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-23 22:14:25 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"heli", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'heli' and password = '12345') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/staff/10
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/helpmate/staff/10" for ::1 at 2017-03-23 22:14:25 +0800
+Processing by HelpmateController#staff as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering helpmate/staff.html.erb within layouts/application
+  Rendered helpmate/staff.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/justferfernandez/Desktop/ICST231-HelpMate/app/views/helpmate/staff.html.erb:8: syntax error, unexpected '<', expecting ')'
+<p><%= @user.id );@output_buff...
+ ^
+/Users/justferfernandez/Desktop/ICST231-HelpMate/app/views/helpmate/staff.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/justferfernandez/Desktop/ICST231-HelpMate/app/views/helpmate/staff.html.erb:11: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/helpmate/staff.html.erb:8: syntax error, unexpected '<', expecting ')'
+app/views/helpmate/staff.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/helpmate/staff.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.5ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Applications/rubystack-2.3.3-1/ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.5ms)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322201830) do
+ActiveRecord::Schema.define(version: 20170323140416) do
 
   create_table "children", force: :cascade do |t|
     t.string   "name"
@@ -129,8 +129,9 @@ ActiveRecord::Schema.define(version: 20170322201830) do
     t.text     "reply_message"
     t.integer  "conv_id"
     t.integer  "councilor_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "conversation_id"
   end
 
   create_table "siblings", force: :cascade do |t|

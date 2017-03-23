@@ -69,6 +69,6 @@ class RepliesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reply_params
-      params.require(:reply).permit(:reply_message, :conv_id)
+      params.require(:reply).permit(:reply_message, :conv_id, :conversation_id)
     end
 end

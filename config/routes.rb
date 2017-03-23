@@ -7,7 +7,7 @@ Rails.application.routes.draw do
  post 'helpmate/newconcern' => 'helpmate#createconcern'
  get 'helpmate/newrec/' => 'helpmate#newrec'
  get 'helpmate/getpform' => 'helpmate#getpform'
- get 'helpmate/edit' => 'helpmate#editpform'
+ get 'helpmate/showconcern' => 'helpmate#showconcern'
  get 'helpmate/register' => 'helpmate#register'
  post 'helpmate/register' => 'helpmate#createuser'
  get '/helpmate/student/:id' => 'helpmate#student'

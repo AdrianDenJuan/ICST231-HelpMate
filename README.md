@@ -1,5 +1,5 @@
 # ICST231 - Helpmate
-#WARNING: never push, this is a final revision, this may conflict the rails project do inform when pushing
+
 ## Members:
 1. Adrian Olivan
 2. Carl Ferddie Sabater
@@ -7,6 +7,7 @@
 4. Justfer Fernandez
 
 ### ACTIVITY
+### STUDENT SIDE 100% COMPLETE
 1. Create CSS for student dashboard, student log in, student create personal form and student display personal form
 2. Create CSS for student list of concern and new concern 
 ### MAJOR REVISION:

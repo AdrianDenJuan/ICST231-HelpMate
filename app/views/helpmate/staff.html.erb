@@ -1,8 +1,12 @@
-<p><a href = "/helpmate" >Log Out</a></p>
-<p><a href = "" >View Concerns</a></p>
-<p><a href = "" >View Generated Personal Form</a></p>
 
-
-
-<%= form_for(@user)
-<p><%= @user.id %></p>
+<h1> Hello, <%= @user.username %> </h1>
+<p><a href = "/helpmate"> Log Out </a></p>
+<% @studentrec = Councilor.where("user_id = ?", @user.id).first %>
+<% if (!@studentrec.pform.present?) %>
+<p><%= link_to "Create Personal Information Form", helpmate_newrec_path('hereid' => @user.id) %></p>
+<% end %>
+<% if(@studentrec.pform.present?) %>
+<p><%= link_to "View Personal Information Form", helpmate_getpform_path('hereid' => @user.id) %></p>
+<% end %>
+<p><%= link_to "View List of Concerns", helpmate_concern_path('hereid' => @user.id)%></p>
+<p><%= link_to "Post a concern", helpmate_newconcern_path('hereid' => @user.id)%></p>
