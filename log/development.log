@@ -30855,3 +30855,182 @@ Processing by HelpmateController#getpform as HTML
 Completed 200 OK in 341ms (Views: 314.7ms | ActiveRecord: 4.0ms)
 
 
+Started POST "/helpmate" for ::1 at 2017-03-24 05:06:43 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'Justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/9
+Completed 302 Found in 65ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-24 05:06:44 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (148.8ms)
+Completed 200 OK in 4386ms (Views: 4370.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-24 05:06:51 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.8ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.6ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.6ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.7ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.7ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (258.0ms)
+Completed 200 OK in 431ms (Views: 398.1ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-24 05:06:57 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.4ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.3ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.3ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.3ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 158ms (Views: 146.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-24 05:06:59 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (2.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.2ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.2ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.2ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.2ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 303ms (Views: 288.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/helpmate/getpform?hereid=9" for ::1 at 2017-03-24 05:07:02 +0800
+Processing by HelpmateController#getpform as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (1.4ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE (student_id = 4) ORDER BY "pforms"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering helpmate/getpform.html.erb within layouts/application
+  [1m[36mParentInfo Load (0.4ms)[0m  [1m[34mSELECT "parent_infos".* FROM "parent_infos" WHERE "parent_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mSibling Load (0.3ms)[0m  [1m[34mSELECT "siblings".* FROM "siblings" WHERE "siblings"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mOtherInfo Load (0.4ms)[0m  [1m[34mSELECT  "other_infos".* FROM "other_infos" WHERE "other_infos"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  [1m[36mEducInfo Load (0.3ms)[0m  [1m[34mSELECT "educ_infos".* FROM "educ_infos" WHERE "educ_infos"."pform_id" = ?[0m  [["pform_id", 56]]
+  [1m[36mContactEmerg Load (0.2ms)[0m  [1m[34mSELECT  "contact_emergs".* FROM "contact_emergs" WHERE "contact_emergs"."pform_id" = ? LIMIT ?[0m  [["pform_id", 56], ["LIMIT", 1]]
+  Rendered helpmate/getpform.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 264ms (Views: 249.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-24 05:07:13 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.3ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 135ms (Views: 125.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-24 05:07:14 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 157ms (Views: 135.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-24 05:07:19 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.2ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 145ms (Views: 137.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/helpmate/newconcern?hereid=9" for ::1 at 2017-03-24 05:07:19 +0800
+Processing by HelpmateController#newconcern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/newconcern.html.erb within layouts/application
+  Rendered helpmate/newconcern.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 183ms (Views: 170.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-24 05:07:26 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 144ms (Views: 131.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/helpmate" for ::1 at 2017-03-24 05:27:34 +0800
+Processing by HelpmateController#identify as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "username"=>"justfer", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username = 'justfer' and password = 'Justy250') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/helpmate/student/9
+Completed 302 Found in 24ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/helpmate/student/9" for ::1 at 2017-03-24 05:27:34 +0800
+Processing by HelpmateController#student as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/student.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = 9) ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPform Load (0.5ms)[0m  [1m[34mSELECT  "pforms".* FROM "pforms" WHERE "pforms"."student_id" = ? LIMIT ?[0m  [["student_id", 4], ["LIMIT", 1]]
+  Rendered helpmate/student.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 248ms (Views: 240.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/helpmate/concern?hereid=9" for ::1 at 2017-03-24 05:27:37 +0800
+Processing by HelpmateController#concern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/concern.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE (user_id = '9') ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" WHERE "conversations"."student_id" = ?[0m  [["student_id", 4]]
+  Rendered helpmate/concern.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 155ms (Views: 147.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/helpmate/newconcern?hereid=9" for ::1 at 2017-03-24 05:27:39 +0800
+Processing by HelpmateController#newconcern as HTML
+  Parameters: {"hereid"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering helpmate/newconcern.html.erb within layouts/application
+  Rendered helpmate/newconcern.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 199ms (Views: 182.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/helpmate" for ::1 at 2017-03-24 05:27:43 +0800
+Processing by HelpmateController#index as HTML
+  Rendering helpmate/index.html.erb within layouts/application
+  Rendered helpmate/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 168ms (Views: 162.0ms | ActiveRecord: 0.0ms)
+
+
